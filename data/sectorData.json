@@ -1,0 +1,4316 @@
+{
+  "industryMedians": {
+    "AERO": {
+      "date": "2025-12-31",
+      "bm": 0.237,
+      "evm": 14.58,
+      "pe_exi": 37.659,
+      "pe_inc": 37.659,
+      "pe_op_basic": 39.849,
+      "pe_op_dil": 40.16,
+      "grossProfit": 0.162,
+      "returnOnInvestedCapital": 0.022,
+      "grossMargin": 0.323,
+      "netMargin": -0.008,
+      "quickRatio": 1.301
+    },
+    "AGRIC": {
+      "date": "2025-12-31",
+      "bm": 0.691,
+      "evm": -1.112,
+      "pe_exi": 3.059,
+      "pe_inc": 3.059,
+      "pe_op_basic": 3.038,
+      "pe_op_dil": 3.047,
+      "grossProfit": 0.1,
+      "returnOnInvestedCapital": -0.093,
+      "grossMargin": 0.267,
+      "netMargin": -0.064,
+      "quickRatio": 1.231
+    },
+    "AUTOS": {
+      "date": "2025-12-31",
+      "bm": 0.588,
+      "evm": 7.761,
+      "pe_exi": 19.424,
+      "pe_inc": 19.424,
+      "pe_op_basic": 16.025,
+      "pe_op_dil": 16.025,
+      "grossProfit": 0.211,
+      "returnOnInvestedCapital": 0.047,
+      "grossMargin": 0.192,
+      "netMargin": 0.014,
+      "quickRatio": 1.185
+    },
+    "BANKS": {
+      "date": "2025-12-31",
+      "bm": 0.941,
+      "evm": 8.566,
+      "pe_exi": 12.59,
+      "pe_inc": 12.59,
+      "pe_op_basic": 12.293,
+      "pe_op_dil": 12.344,
+      "grossProfit": 0.036,
+      "returnOnInvestedCapital": 0.0,
+      "grossMargin": 0.615,
+      "netMargin": 0.162,
+      "quickRatio": 1.507
+    },
+    "BEER": {
+      "date": "2025-12-31",
+      "bm": 0.887,
+      "evm": 10.65,
+      "pe_exi": 20.14,
+      "pe_inc": 20.14,
+      "pe_op_basic": 15.151,
+      "pe_op_dil": 15.151,
+      "grossProfit": 0.189,
+      "returnOnInvestedCapital": 0.0,
+      "grossMargin": 0.563,
+      "netMargin": 0.047,
+      "quickRatio": 0.566
+    },
+    "BLDMT": {
+      "date": "2025-12-31",
+      "bm": 0.335,
+      "evm": 11.777,
+      "pe_exi": 18.734,
+      "pe_inc": 18.734,
+      "pe_op_basic": 15.945,
+      "pe_op_dil": 17.355,
+      "grossProfit": 0.316,
+      "returnOnInvestedCapital": 0.088,
+      "grossMargin": 0.354,
+      "netMargin": 0.069,
+      "quickRatio": 1.345
+    },
+    "BOOKS": {
+      "date": "2025-12-31",
+      "bm": 0.427,
+      "evm": 9.786,
+      "pe_exi": 16.38,
+      "pe_inc": 12.618,
+      "pe_op_basic": 17.004,
+      "pe_op_dil": 17.004,
+      "grossProfit": 0.48,
+      "returnOnInvestedCapital": 0.098,
+      "grossMargin": 0.562,
+      "netMargin": 0.041,
+      "quickRatio": 0.885
+    },
+    "BOXES": {
+      "date": "2025-12-31",
+      "bm": 0.639,
+      "evm": 9.069,
+      "pe_exi": 13.731,
+      "pe_inc": 12.744,
+      "pe_op_basic": 15.702,
+      "pe_op_dil": 15.871,
+      "grossProfit": 0.181,
+      "returnOnInvestedCapital": 0.081,
+      "grossMargin": 0.253,
+      "netMargin": 0.053,
+      "quickRatio": 0.693
+    },
+    "BUSSV": {
+      "date": "2025-12-31",
+      "bm": 0.318,
+      "evm": 10.521,
+      "pe_exi": 16.792,
+      "pe_inc": 16.332,
+      "pe_op_basic": 19.241,
+      "pe_op_dil": 19.091,
+      "grossProfit": 0.331,
+      "returnOnInvestedCapital": 0.0,
+      "grossMargin": 0.607,
+      "netMargin": -0.013,
+      "quickRatio": 1.525
+    },
+    "CHEMS": {
+      "date": "2025-12-31",
+      "bm": 0.723,
+      "evm": 9.801,
+      "pe_exi": 18.362,
+      "pe_inc": 19.439,
+      "pe_op_basic": 15.916,
+      "pe_op_dil": 16.199,
+      "grossProfit": 0.158,
+      "returnOnInvestedCapital": 0.008,
+      "grossMargin": 0.297,
+      "netMargin": -0.014,
+      "quickRatio": 1.358
+    },
+    "CHIPS": {
+      "date": "2025-12-31",
+      "bm": 0.306,
+      "evm": 12.261,
+      "pe_exi": 31.63,
+      "pe_inc": 31.195,
+      "pe_op_basic": 26.228,
+      "pe_op_dil": 26.544,
+      "grossProfit": 0.24,
+      "returnOnInvestedCapital": 0.0,
+      "grossMargin": 0.426,
+      "netMargin": 0.016,
+      "quickRatio": 1.706
+    },
+    "CLTHS": {
+      "date": "2025-12-31",
+      "bm": 0.475,
+      "evm": 11.296,
+      "pe_exi": 15.547,
+      "pe_inc": 15.102,
+      "pe_op_basic": 14.337,
+      "pe_op_dil": 14.892,
+      "grossProfit": 0.541,
+      "returnOnInvestedCapital": 0.037,
+      "grossMargin": 0.498,
+      "netMargin": 0.034,
+      "quickRatio": 1.135
+    },
+    "CNSTR": {
+      "date": "2025-12-31",
+      "bm": 0.371,
+      "evm": 11.443,
+      "pe_exi": 11.303,
+      "pe_inc": 11.303,
+      "pe_op_basic": 10.05,
+      "pe_op_dil": 10.091,
+      "grossProfit": 0.225,
+      "returnOnInvestedCapital": 0.114,
+      "grossMargin": 0.207,
+      "netMargin": 0.052,
+      "quickRatio": 1.262
+    },
+    "COAL": {
+      "date": "2025-12-31",
+      "bm": 0.842,
+      "evm": 7.839,
+      "pe_exi": -85.11,
+      "pe_inc": -82.994,
+      "pe_op_basic": 60.355,
+      "pe_op_dil": 62.733,
+      "grossProfit": 0.094,
+      "returnOnInvestedCapital": -0.002,
+      "grossMargin": 0.168,
+      "netMargin": -0.012,
+      "quickRatio": 1.641
+    },
+    "COMPS": {
+      "date": "2025-12-31",
+      "bm": 0.274,
+      "evm": 10.449,
+      "pe_exi": 22.18,
+      "pe_inc": 22.18,
+      "pe_op_basic": 21.416,
+      "pe_op_dil": 22.282,
+      "grossProfit": 0.341,
+      "returnOnInvestedCapital": 0.068,
+      "grossMargin": 0.401,
+      "netMargin": 0.021,
+      "quickRatio": 1.183
+    },
+    "DRUGS": {
+      "date": "2025-12-31",
+      "bm": 0.385,
+      "evm": -2.042,
+      "pe_exi": -1.388,
+      "pe_inc": -1.381,
+      "pe_op_basic": -1.289,
+      "pe_op_dil": -0.878,
+      "grossProfit": 0.0,
+      "returnOnInvestedCapital": -0.45,
+      "grossMargin": 0.089,
+      "netMargin": -1.929,
+      "quickRatio": 4.066
+    },
+    "ELCEQ": {
+      "date": "2025-12-31",
+      "bm": 0.35,
+      "evm": -1.233,
+      "pe_exi": 21.452,
+      "pe_inc": 21.452,
+      "pe_op_basic": 21.431,
+      "pe_op_dil": 21.899,
+      "grossProfit": 0.218,
+      "returnOnInvestedCapital": -0.04,
+      "grossMargin": 0.311,
+      "netMargin": -0.136,
+      "quickRatio": 1.29
+    },
+    "FABPR": {
+      "date": "2025-12-31",
+      "bm": 0.41,
+      "evm": 11.369,
+      "pe_exi": 31.263,
+      "pe_inc": 31.263,
+      "pe_op_basic": 26.768,
+      "pe_op_dil": 26.959,
+      "grossProfit": 0.194,
+      "returnOnInvestedCapital": 0.054,
+      "grossMargin": 0.281,
+      "netMargin": 0.043,
+      "quickRatio": 1.189
+    },
+    "FIN": {
+      "date": "2025-12-31",
+      "bm": 0.343,
+      "evm": 12.676,
+      "pe_exi": 22.99,
+      "pe_inc": 22.99,
+      "pe_op_basic": 18.751,
+      "pe_op_dil": 20.822,
+      "grossProfit": 0.089,
+      "returnOnInvestedCapital": 0.109,
+      "grossMargin": 0.339,
+      "netMargin": 0.122,
+      "quickRatio": 1.78
+    },
+    "FOOD": {
+      "date": "2025-12-31",
+      "bm": 0.581,
+      "evm": 10.635,
+      "pe_exi": 16.859,
+      "pe_inc": 16.859,
+      "pe_op_basic": 12.549,
+      "pe_op_dil": 12.834,
+      "grossProfit": 0.219,
+      "returnOnInvestedCapital": 0.043,
+      "grossMargin": 0.286,
+      "netMargin": 0.037,
+      "quickRatio": 0.855
+    },
+    "FUN": {
+      "date": "2025-12-31",
+      "bm": 0.411,
+      "evm": 10.887,
+      "pe_exi": 19.632,
+      "pe_inc": 19.632,
+      "pe_op_basic": 18.752,
+      "pe_op_dil": 18.873,
+      "grossProfit": 0.203,
+      "returnOnInvestedCapital": 0.022,
+      "grossMargin": 0.427,
+      "netMargin": -0.021,
+      "quickRatio": 0.793
+    },
+    "GOLD": {
+      "date": "2025-12-31",
+      "bm": 0.298,
+      "evm": 6.944,
+      "pe_exi": -7.412,
+      "pe_inc": -7.412,
+      "pe_op_basic": -7.412,
+      "pe_op_dil": -7.412,
+      "grossProfit": 0.067,
+      "returnOnInvestedCapital": 0.044,
+      "grossMargin": 0.528,
+      "netMargin": 0.202,
+      "quickRatio": 1.483
+    },
+    "GUNS": {
+      "date": "2025-12-31",
+      "bm": 0.29,
+      "evm": 13.895,
+      "pe_exi": 27.006,
+      "pe_inc": 27.006,
+      "pe_op_basic": 25.92,
+      "pe_op_dil": 26.004,
+      "grossProfit": 0.144,
+      "returnOnInvestedCapital": 0.022,
+      "grossMargin": 0.241,
+      "netMargin": 0.005,
+      "quickRatio": 2.178
+    },
+    "HLTH": {
+      "date": "2025-12-31",
+      "bm": 0.418,
+      "evm": 10.42,
+      "pe_exi": 20.178,
+      "pe_inc": 20.216,
+      "pe_op_basic": 19.639,
+      "pe_op_dil": 19.899,
+      "grossProfit": 0.239,
+      "returnOnInvestedCapital": 0.042,
+      "grossMargin": 0.312,
+      "netMargin": 0.005,
+      "quickRatio": 1.373
+    },
+    "HSHLD": {
+      "date": "2025-12-31",
+      "bm": 0.809,
+      "evm": 11.322,
+      "pe_exi": 15.587,
+      "pe_inc": 15.567,
+      "pe_op_basic": 16.455,
+      "pe_op_dil": 16.524,
+      "grossProfit": 0.349,
+      "returnOnInvestedCapital": 0.03,
+      "grossMargin": 0.441,
+      "netMargin": 0.008,
+      "quickRatio": 1.116
+    },
+    "INSUR": {
+      "date": "2025-12-31",
+      "bm": 0.592,
+      "evm": 10.663,
+      "pe_exi": 14.32,
+      "pe_inc": 14.32,
+      "pe_op_basic": 13.456,
+      "pe_op_dil": 13.714,
+      "grossProfit": 0.07,
+      "returnOnInvestedCapital": 0.099,
+      "grossMargin": 0.183,
+      "netMargin": 0.078,
+      "quickRatio": 1.482
+    },
+    "LABEQ": {
+      "date": "2025-12-31",
+      "bm": 0.333,
+      "evm": 15.962,
+      "pe_exi": 32.933,
+      "pe_inc": 31.369,
+      "pe_op_basic": 31.287,
+      "pe_op_dil": 31.391,
+      "grossProfit": 0.242,
+      "returnOnInvestedCapital": 0.012,
+      "grossMargin": 0.465,
+      "netMargin": 0.029,
+      "quickRatio": 1.783
+    },
+    "MACH": {
+      "date": "2025-12-31",
+      "bm": 0.402,
+      "evm": 11.091,
+      "pe_exi": 25.553,
+      "pe_inc": 25.083,
+      "pe_op_basic": 24.28,
+      "pe_op_dil": 24.478,
+      "grossProfit": 0.252,
+      "returnOnInvestedCapital": 0.073,
+      "grossMargin": 0.363,
+      "netMargin": 0.065,
+      "quickRatio": 1.332
+    },
+    "MEALS": {
+      "date": "2025-12-31",
+      "bm": 0.367,
+      "evm": 14.29,
+      "pe_exi": 19.809,
+      "pe_inc": 19.809,
+      "pe_op_basic": 24.573,
+      "pe_op_dil": 24.905,
+      "grossProfit": 0.182,
+      "returnOnInvestedCapital": 0.03,
+      "grossMargin": 0.219,
+      "netMargin": 0.022,
+      "quickRatio": 0.682
+    },
+    "MEDEQ": {
+      "date": "2025-12-31",
+      "bm": 0.311,
+      "evm": -1.476,
+      "pe_exi": 21.031,
+      "pe_inc": 21.031,
+      "pe_op_basic": 22.615,
+      "pe_op_dil": 22.75,
+      "grossProfit": 0.332,
+      "returnOnInvestedCapital": -0.104,
+      "grossMargin": 0.619,
+      "netMargin": -0.252,
+      "quickRatio": 2.194
+    },
+    "MINES": {
+      "date": "2025-12-31",
+      "bm": 0.269,
+      "evm": 0.531,
+      "pe_exi": 9.884,
+      "pe_inc": 9.884,
+      "pe_op_basic": 9.855,
+      "pe_op_dil": 9.884,
+      "grossProfit": 0.079,
+      "returnOnInvestedCapital": -0.026,
+      "grossMargin": 0.337,
+      "netMargin": -0.026,
+      "quickRatio": 2.552
+    },
+    "OIL": {
+      "date": "2025-12-31",
+      "bm": 0.822,
+      "evm": 5.605,
+      "pe_exi": 17.487,
+      "pe_inc": 17.487,
+      "pe_op_basic": 17.191,
+      "pe_op_dil": 17.191,
+      "grossProfit": 0.177,
+      "returnOnInvestedCapital": 0.047,
+      "grossMargin": 0.392,
+      "netMargin": 0.031,
+      "quickRatio": 0.91
+    },
+    "OTHER": {
+      "date": "2025-12-31",
+      "bm": 0.297,
+      "evm": 12.779,
+      "pe_exi": 34.6,
+      "pe_inc": 34.6,
+      "pe_op_basic": 29.852,
+      "pe_op_dil": 29.974,
+      "grossProfit": 0.179,
+      "returnOnInvestedCapital": 0.025,
+      "grossMargin": 0.3,
+      "netMargin": 0.005,
+      "quickRatio": 0.842
+    },
+    "PAPER": {
+      "date": "2025-12-31",
+      "bm": 0.785,
+      "evm": 8.849,
+      "pe_exi": 12.538,
+      "pe_inc": 12.538,
+      "pe_op_basic": 13.118,
+      "pe_op_dil": 13.118,
+      "grossProfit": 0.218,
+      "returnOnInvestedCapital": 0.071,
+      "grossMargin": 0.286,
+      "netMargin": 0.019,
+      "quickRatio": 1.005
+    },
+    "PERSV": {
+      "date": "2025-12-31",
+      "bm": 0.328,
+      "evm": 10.985,
+      "pe_exi": 9.874,
+      "pe_inc": 9.907,
+      "pe_op_basic": 8.634,
+      "pe_op_dil": 9.233,
+      "grossProfit": 0.383,
+      "returnOnInvestedCapital": 0.085,
+      "grossMargin": 0.505,
+      "netMargin": 0.061,
+      "quickRatio": 0.956
+    },
+    "RLEST": {
+      "date": "2025-12-31",
+      "bm": 0.685,
+      "evm": 11.263,
+      "pe_exi": 7.486,
+      "pe_inc": 7.486,
+      "pe_op_basic": 7.419,
+      "pe_op_dil": 7.464,
+      "grossProfit": 0.106,
+      "returnOnInvestedCapital": 0.005,
+      "grossMargin": 0.266,
+      "netMargin": 0.011,
+      "quickRatio": 1.232
+    },
+    "RTAIL": {
+      "date": "2025-12-31",
+      "bm": 0.404,
+      "evm": 12.776,
+      "pe_exi": 13.923,
+      "pe_inc": 13.7,
+      "pe_op_basic": 14.147,
+      "pe_op_dil": 14.309,
+      "grossProfit": 0.5,
+      "returnOnInvestedCapital": 0.04,
+      "grossMargin": 0.37,
+      "netMargin": 0.016,
+      "quickRatio": 0.546
+    },
+    "RUBBR": {
+      "date": "2025-12-31",
+      "bm": 0.332,
+      "evm": 12.486,
+      "pe_exi": 24.715,
+      "pe_inc": 24.715,
+      "pe_op_basic": 23.136,
+      "pe_op_dil": 23.322,
+      "grossProfit": 0.283,
+      "returnOnInvestedCapital": 0.069,
+      "grossMargin": 0.373,
+      "netMargin": 0.068,
+      "quickRatio": 1.488
+    },
+    "SHIPS": {
+      "date": "2025-12-31",
+      "bm": 0.69,
+      "evm": 12.322,
+      "pe_exi": 23.453,
+      "pe_inc": 23.453,
+      "pe_op_basic": 23.453,
+      "pe_op_dil": 23.453,
+      "grossProfit": 0.195,
+      "returnOnInvestedCapital": 0.07,
+      "grossMargin": 0.212,
+      "netMargin": 0.047,
+      "quickRatio": 1.014
+    },
+    "SMOKE": {
+      "date": "2025-12-31",
+      "bm": 0.185,
+      "evm": 10.024,
+      "pe_exi": 11.004,
+      "pe_inc": 11.004,
+      "pe_op_basic": 10.798,
+      "pe_op_dil": 10.798,
+      "grossProfit": 0.426,
+      "returnOnInvestedCapital": 0.186,
+      "grossMargin": 0.588,
+      "netMargin": 0.137,
+      "quickRatio": 0.907
+    },
+    "SODA": {
+      "date": "2025-12-31",
+      "bm": 0.155,
+      "evm": 18.276,
+      "pe_exi": 19.587,
+      "pe_inc": 19.587,
+      "pe_op_basic": 19.473,
+      "pe_op_dil": 19.511,
+      "grossProfit": 0.536,
+      "returnOnInvestedCapital": 0.106,
+      "grossMargin": 0.454,
+      "netMargin": 0.1,
+      "quickRatio": 1.946
+    },
+    "STEEL": {
+      "date": "2025-12-31",
+      "bm": 0.683,
+      "evm": 9.47,
+      "pe_exi": 19.832,
+      "pe_inc": 19.832,
+      "pe_op_basic": 16.611,
+      "pe_op_dil": 16.935,
+      "grossProfit": 0.201,
+      "returnOnInvestedCapital": 0.073,
+      "grossMargin": 0.192,
+      "netMargin": 0.034,
+      "quickRatio": 1.231
+    },
+    "TELCM": {
+      "date": "2025-12-31",
+      "bm": 0.744,
+      "evm": 8.257,
+      "pe_exi": 6.003,
+      "pe_inc": 6.44,
+      "pe_op_basic": 7.254,
+      "pe_op_dil": 7.394,
+      "grossProfit": 0.189,
+      "returnOnInvestedCapital": 0.02,
+      "grossMargin": 0.5,
+      "netMargin": -0.01,
+      "quickRatio": 1.175
+    },
+    "TOYS": {
+      "date": "2025-12-31",
+      "bm": 0.806,
+      "evm": 10.008,
+      "pe_exi": -3.394,
+      "pe_inc": -3.394,
+      "pe_op_basic": -2.561,
+      "pe_op_dil": -2.561,
+      "grossProfit": 0.358,
+      "returnOnInvestedCapital": 0.0,
+      "grossMargin": 0.432,
+      "netMargin": -0.049,
+      "quickRatio": 1.309
+    },
+    "TRANS": {
+      "date": "2025-12-31",
+      "bm": 0.539,
+      "evm": 8.693,
+      "pe_exi": 20.48,
+      "pe_inc": 20.419,
+      "pe_op_basic": 19.325,
+      "pe_op_dil": 19.357,
+      "grossProfit": 0.16,
+      "returnOnInvestedCapital": 0.036,
+      "grossMargin": 0.184,
+      "netMargin": 0.011,
+      "quickRatio": 1.144
+    },
+    "TXTLS": {
+      "date": "2025-12-31",
+      "bm": 1.115,
+      "evm": 7.935,
+      "pe_exi": -2.612,
+      "pe_inc": -2.612,
+      "pe_op_basic": -1.277,
+      "pe_op_dil": -1.277,
+      "grossProfit": 0.251,
+      "returnOnInvestedCapital": -0.031,
+      "grossMargin": 0.264,
+      "netMargin": -0.045,
+      "quickRatio": 1.478
+    },
+    "UTIL": {
+      "date": "2025-12-31",
+      "bm": 0.621,
+      "evm": 12.722,
+      "pe_exi": 18.497,
+      "pe_inc": 18.497,
+      "pe_op_basic": 18.838,
+      "pe_op_dil": 18.924,
+      "grossProfit": 0.081,
+      "returnOnInvestedCapital": 0.063,
+      "grossMargin": 0.382,
+      "netMargin": 0.136,
+      "quickRatio": 0.629
+    },
+    "WHLSL": {
+      "date": "2025-12-31",
+      "bm": 0.582,
+      "evm": 11.195,
+      "pe_exi": 22.091,
+      "pe_inc": 21.887,
+      "pe_op_basic": 21.066,
+      "pe_op_dil": 21.12,
+      "grossProfit": 0.33,
+      "returnOnInvestedCapital": 0.057,
+      "grossMargin": 0.234,
+      "netMargin": 0.016,
+      "quickRatio": 1.163
+    }
+  },
+  "sicToFF48": [
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 100,
+      "sic_hi": 199
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 200,
+      "sic_hi": 299
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 700,
+      "sic_hi": 799
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 910,
+      "sic_hi": 919
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2048,
+      "sic_hi": 2048
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2000,
+      "sic_hi": 2009
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2010,
+      "sic_hi": 2019
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2020,
+      "sic_hi": 2029
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2030,
+      "sic_hi": 2039
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2040,
+      "sic_hi": 2046
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2050,
+      "sic_hi": 2059
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2060,
+      "sic_hi": 2063
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2070,
+      "sic_hi": 2079
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2090,
+      "sic_hi": 2092
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2095,
+      "sic_hi": 2095
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2098,
+      "sic_hi": 2099
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2064,
+      "sic_hi": 2068
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2086,
+      "sic_hi": 2086
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2087,
+      "sic_hi": 2087
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2096,
+      "sic_hi": 2096
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2097,
+      "sic_hi": 2097
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2080,
+      "sic_hi": 2080
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2082,
+      "sic_hi": 2082
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2083,
+      "sic_hi": 2083
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2084,
+      "sic_hi": 2084
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2085,
+      "sic_hi": 2085
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2100,
+      "sic_hi": 2199
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 920,
+      "sic_hi": 999
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 3650,
+      "sic_hi": 3651
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 3652,
+      "sic_hi": 3652
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 3732,
+      "sic_hi": 3732
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 3930,
+      "sic_hi": 3931
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 3940,
+      "sic_hi": 3949
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 7800,
+      "sic_hi": 7829
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 7830,
+      "sic_hi": 7833
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 7840,
+      "sic_hi": 7841
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 7900,
+      "sic_hi": 7900
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 7910,
+      "sic_hi": 7911
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 7920,
+      "sic_hi": 7929
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 7930,
+      "sic_hi": 7933
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 7940,
+      "sic_hi": 7949
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 7980,
+      "sic_hi": 7980
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 7990,
+      "sic_hi": 7999
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2700,
+      "sic_hi": 2709
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2710,
+      "sic_hi": 2719
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2720,
+      "sic_hi": 2729
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2730,
+      "sic_hi": 2739
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2740,
+      "sic_hi": 2749
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2770,
+      "sic_hi": 2771
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2780,
+      "sic_hi": 2789
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2790,
+      "sic_hi": 2799
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2047,
+      "sic_hi": 2047
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2391,
+      "sic_hi": 2392
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2510,
+      "sic_hi": 2519
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2590,
+      "sic_hi": 2599
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2840,
+      "sic_hi": 2843
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 2844,
+      "sic_hi": 2844
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 3160,
+      "sic_hi": 3161
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 3170,
+      "sic_hi": 3171
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 3172,
+      "sic_hi": 3172
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 3190,
+      "sic_hi": 3199
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 3229,
+      "sic_hi": 3229
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 3260,
+      "sic_hi": 3260
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 3262,
+      "sic_hi": 3263
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 3269,
+      "sic_hi": 3269
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 3230,
+      "sic_hi": 3231
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 3630,
+      "sic_hi": 3639
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 3750,
+      "sic_hi": 3751
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 3800,
+      "sic_hi": 3800
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 3860,
+      "sic_hi": 3861
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 3870,
+      "sic_hi": 3873
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 3910,
+      "sic_hi": 3911
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 3914,
+      "sic_hi": 3914
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 3915,
+      "sic_hi": 3915
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 3960,
+      "sic_hi": 3962
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 3991,
+      "sic_hi": 3991
+    },
+    {
+      "ff48_num": null,
+      "ff48_abbr": null,
+      "sic_lo": 3995,
+      "sic_hi": 3995
+    },
+    {
+      "ff48_num": 10,
+      "ff48_abbr": "Clths",
+      "sic_lo": 2300,
+      "sic_hi": 2390
+    },
+    {
+      "ff48_num": 10,
+      "ff48_abbr": "Clths",
+      "sic_lo": 3020,
+      "sic_hi": 3021
+    },
+    {
+      "ff48_num": 10,
+      "ff48_abbr": "Clths",
+      "sic_lo": 3100,
+      "sic_hi": 3111
+    },
+    {
+      "ff48_num": 10,
+      "ff48_abbr": "Clths",
+      "sic_lo": 3130,
+      "sic_hi": 3131
+    },
+    {
+      "ff48_num": 10,
+      "ff48_abbr": "Clths",
+      "sic_lo": 3140,
+      "sic_hi": 3149
+    },
+    {
+      "ff48_num": 10,
+      "ff48_abbr": "Clths",
+      "sic_lo": 3150,
+      "sic_hi": 3151
+    },
+    {
+      "ff48_num": 10,
+      "ff48_abbr": "Clths",
+      "sic_lo": 3963,
+      "sic_hi": 3965
+    },
+    {
+      "ff48_num": 11,
+      "ff48_abbr": "Hlth",
+      "sic_lo": 8000,
+      "sic_hi": 8099
+    },
+    {
+      "ff48_num": 12,
+      "ff48_abbr": "MedEq",
+      "sic_lo": 3693,
+      "sic_hi": 3693
+    },
+    {
+      "ff48_num": 12,
+      "ff48_abbr": "MedEq",
+      "sic_lo": 3840,
+      "sic_hi": 3849
+    },
+    {
+      "ff48_num": 12,
+      "ff48_abbr": "MedEq",
+      "sic_lo": 3850,
+      "sic_hi": 3851
+    },
+    {
+      "ff48_num": 13,
+      "ff48_abbr": "Drugs",
+      "sic_lo": 2830,
+      "sic_hi": 2830
+    },
+    {
+      "ff48_num": 13,
+      "ff48_abbr": "Drugs",
+      "sic_lo": 2831,
+      "sic_hi": 2831
+    },
+    {
+      "ff48_num": 13,
+      "ff48_abbr": "Drugs",
+      "sic_lo": 2833,
+      "sic_hi": 2833
+    },
+    {
+      "ff48_num": 13,
+      "ff48_abbr": "Drugs",
+      "sic_lo": 2834,
+      "sic_hi": 2834
+    },
+    {
+      "ff48_num": 13,
+      "ff48_abbr": "Drugs",
+      "sic_lo": 2835,
+      "sic_hi": 2835
+    },
+    {
+      "ff48_num": 13,
+      "ff48_abbr": "Drugs",
+      "sic_lo": 2836,
+      "sic_hi": 2836
+    },
+    {
+      "ff48_num": 14,
+      "ff48_abbr": "Chems",
+      "sic_lo": 2800,
+      "sic_hi": 2809
+    },
+    {
+      "ff48_num": 14,
+      "ff48_abbr": "Chems",
+      "sic_lo": 2810,
+      "sic_hi": 2819
+    },
+    {
+      "ff48_num": 14,
+      "ff48_abbr": "Chems",
+      "sic_lo": 2820,
+      "sic_hi": 2829
+    },
+    {
+      "ff48_num": 14,
+      "ff48_abbr": "Chems",
+      "sic_lo": 2850,
+      "sic_hi": 2859
+    },
+    {
+      "ff48_num": 14,
+      "ff48_abbr": "Chems",
+      "sic_lo": 2860,
+      "sic_hi": 2869
+    },
+    {
+      "ff48_num": 14,
+      "ff48_abbr": "Chems",
+      "sic_lo": 2870,
+      "sic_hi": 2879
+    },
+    {
+      "ff48_num": 14,
+      "ff48_abbr": "Chems",
+      "sic_lo": 2890,
+      "sic_hi": 2899
+    },
+    {
+      "ff48_num": 15,
+      "ff48_abbr": "Rubbr",
+      "sic_lo": 3031,
+      "sic_hi": 3031
+    },
+    {
+      "ff48_num": 15,
+      "ff48_abbr": "Rubbr",
+      "sic_lo": 3041,
+      "sic_hi": 3041
+    },
+    {
+      "ff48_num": 15,
+      "ff48_abbr": "Rubbr",
+      "sic_lo": 3050,
+      "sic_hi": 3053
+    },
+    {
+      "ff48_num": 15,
+      "ff48_abbr": "Rubbr",
+      "sic_lo": 3060,
+      "sic_hi": 3069
+    },
+    {
+      "ff48_num": 15,
+      "ff48_abbr": "Rubbr",
+      "sic_lo": 3070,
+      "sic_hi": 3079
+    },
+    {
+      "ff48_num": 15,
+      "ff48_abbr": "Rubbr",
+      "sic_lo": 3080,
+      "sic_hi": 3089
+    },
+    {
+      "ff48_num": 15,
+      "ff48_abbr": "Rubbr",
+      "sic_lo": 3090,
+      "sic_hi": 3099
+    },
+    {
+      "ff48_num": 16,
+      "ff48_abbr": "Txtls",
+      "sic_lo": 2200,
+      "sic_hi": 2269
+    },
+    {
+      "ff48_num": 16,
+      "ff48_abbr": "Txtls",
+      "sic_lo": 2270,
+      "sic_hi": 2279
+    },
+    {
+      "ff48_num": 16,
+      "ff48_abbr": "Txtls",
+      "sic_lo": 2280,
+      "sic_hi": 2284
+    },
+    {
+      "ff48_num": 16,
+      "ff48_abbr": "Txtls",
+      "sic_lo": 2290,
+      "sic_hi": 2295
+    },
+    {
+      "ff48_num": 16,
+      "ff48_abbr": "Txtls",
+      "sic_lo": 2297,
+      "sic_hi": 2297
+    },
+    {
+      "ff48_num": 16,
+      "ff48_abbr": "Txtls",
+      "sic_lo": 2298,
+      "sic_hi": 2298
+    },
+    {
+      "ff48_num": 16,
+      "ff48_abbr": "Txtls",
+      "sic_lo": 2299,
+      "sic_hi": 2299
+    },
+    {
+      "ff48_num": 16,
+      "ff48_abbr": "Txtls",
+      "sic_lo": 2393,
+      "sic_hi": 2395
+    },
+    {
+      "ff48_num": 16,
+      "ff48_abbr": "Txtls",
+      "sic_lo": 2397,
+      "sic_hi": 2399
+    },
+    {
+      "ff48_num": 17,
+      "ff48_abbr": "BldMt",
+      "sic_lo": 800,
+      "sic_hi": 899
+    },
+    {
+      "ff48_num": 17,
+      "ff48_abbr": "BldMt",
+      "sic_lo": 2400,
+      "sic_hi": 2439
+    },
+    {
+      "ff48_num": 17,
+      "ff48_abbr": "BldMt",
+      "sic_lo": 2450,
+      "sic_hi": 2459
+    },
+    {
+      "ff48_num": 17,
+      "ff48_abbr": "BldMt",
+      "sic_lo": 2490,
+      "sic_hi": 2499
+    },
+    {
+      "ff48_num": 17,
+      "ff48_abbr": "BldMt",
+      "sic_lo": 2660,
+      "sic_hi": 2661
+    },
+    {
+      "ff48_num": 17,
+      "ff48_abbr": "BldMt",
+      "sic_lo": 2950,
+      "sic_hi": 2952
+    },
+    {
+      "ff48_num": 17,
+      "ff48_abbr": "BldMt",
+      "sic_lo": 3200,
+      "sic_hi": 3200
+    },
+    {
+      "ff48_num": 17,
+      "ff48_abbr": "BldMt",
+      "sic_lo": 3210,
+      "sic_hi": 3211
+    },
+    {
+      "ff48_num": 17,
+      "ff48_abbr": "BldMt",
+      "sic_lo": 3240,
+      "sic_hi": 3241
+    },
+    {
+      "ff48_num": 17,
+      "ff48_abbr": "BldMt",
+      "sic_lo": 3250,
+      "sic_hi": 3259
+    },
+    {
+      "ff48_num": 17,
+      "ff48_abbr": "BldMt",
+      "sic_lo": 3261,
+      "sic_hi": 3261
+    },
+    {
+      "ff48_num": 17,
+      "ff48_abbr": "BldMt",
+      "sic_lo": 3264,
+      "sic_hi": 3264
+    },
+    {
+      "ff48_num": 17,
+      "ff48_abbr": "BldMt",
+      "sic_lo": 3270,
+      "sic_hi": 3275
+    },
+    {
+      "ff48_num": 17,
+      "ff48_abbr": "BldMt",
+      "sic_lo": 3280,
+      "sic_hi": 3281
+    },
+    {
+      "ff48_num": 17,
+      "ff48_abbr": "BldMt",
+      "sic_lo": 3290,
+      "sic_hi": 3293
+    },
+    {
+      "ff48_num": 17,
+      "ff48_abbr": "BldMt",
+      "sic_lo": 3295,
+      "sic_hi": 3299
+    },
+    {
+      "ff48_num": 17,
+      "ff48_abbr": "BldMt",
+      "sic_lo": 3420,
+      "sic_hi": 3429
+    },
+    {
+      "ff48_num": 17,
+      "ff48_abbr": "BldMt",
+      "sic_lo": 3430,
+      "sic_hi": 3433
+    },
+    {
+      "ff48_num": 17,
+      "ff48_abbr": "BldMt",
+      "sic_lo": 3440,
+      "sic_hi": 3441
+    },
+    {
+      "ff48_num": 17,
+      "ff48_abbr": "BldMt",
+      "sic_lo": 3442,
+      "sic_hi": 3442
+    },
+    {
+      "ff48_num": 17,
+      "ff48_abbr": "BldMt",
+      "sic_lo": 3446,
+      "sic_hi": 3446
+    },
+    {
+      "ff48_num": 17,
+      "ff48_abbr": "BldMt",
+      "sic_lo": 3448,
+      "sic_hi": 3448
+    },
+    {
+      "ff48_num": 17,
+      "ff48_abbr": "BldMt",
+      "sic_lo": 3449,
+      "sic_hi": 3449
+    },
+    {
+      "ff48_num": 17,
+      "ff48_abbr": "BldMt",
+      "sic_lo": 3450,
+      "sic_hi": 3451
+    },
+    {
+      "ff48_num": 17,
+      "ff48_abbr": "BldMt",
+      "sic_lo": 3452,
+      "sic_hi": 3452
+    },
+    {
+      "ff48_num": 17,
+      "ff48_abbr": "BldMt",
+      "sic_lo": 3490,
+      "sic_hi": 3499
+    },
+    {
+      "ff48_num": 17,
+      "ff48_abbr": "BldMt",
+      "sic_lo": 3996,
+      "sic_hi": 3996
+    },
+    {
+      "ff48_num": 18,
+      "ff48_abbr": "Cnstr",
+      "sic_lo": 1500,
+      "sic_hi": 1511
+    },
+    {
+      "ff48_num": 18,
+      "ff48_abbr": "Cnstr",
+      "sic_lo": 1520,
+      "sic_hi": 1529
+    },
+    {
+      "ff48_num": 18,
+      "ff48_abbr": "Cnstr",
+      "sic_lo": 1530,
+      "sic_hi": 1539
+    },
+    {
+      "ff48_num": 18,
+      "ff48_abbr": "Cnstr",
+      "sic_lo": 1540,
+      "sic_hi": 1549
+    },
+    {
+      "ff48_num": 18,
+      "ff48_abbr": "Cnstr",
+      "sic_lo": 1600,
+      "sic_hi": 1699
+    },
+    {
+      "ff48_num": 18,
+      "ff48_abbr": "Cnstr",
+      "sic_lo": 1700,
+      "sic_hi": 1799
+    },
+    {
+      "ff48_num": 19,
+      "ff48_abbr": "Steel",
+      "sic_lo": 3300,
+      "sic_hi": 3300
+    },
+    {
+      "ff48_num": 19,
+      "ff48_abbr": "Steel",
+      "sic_lo": 3310,
+      "sic_hi": 3317
+    },
+    {
+      "ff48_num": 19,
+      "ff48_abbr": "Steel",
+      "sic_lo": 3320,
+      "sic_hi": 3325
+    },
+    {
+      "ff48_num": 19,
+      "ff48_abbr": "Steel",
+      "sic_lo": 3330,
+      "sic_hi": 3339
+    },
+    {
+      "ff48_num": 19,
+      "ff48_abbr": "Steel",
+      "sic_lo": 3340,
+      "sic_hi": 3341
+    },
+    {
+      "ff48_num": 19,
+      "ff48_abbr": "Steel",
+      "sic_lo": 3350,
+      "sic_hi": 3357
+    },
+    {
+      "ff48_num": 19,
+      "ff48_abbr": "Steel",
+      "sic_lo": 3360,
+      "sic_hi": 3369
+    },
+    {
+      "ff48_num": 19,
+      "ff48_abbr": "Steel",
+      "sic_lo": 3370,
+      "sic_hi": 3379
+    },
+    {
+      "ff48_num": 19,
+      "ff48_abbr": "Steel",
+      "sic_lo": 3390,
+      "sic_hi": 3399
+    },
+    {
+      "ff48_num": 20,
+      "ff48_abbr": "FabPr",
+      "sic_lo": 3400,
+      "sic_hi": 3400
+    },
+    {
+      "ff48_num": 20,
+      "ff48_abbr": "FabPr",
+      "sic_lo": 3443,
+      "sic_hi": 3443
+    },
+    {
+      "ff48_num": 20,
+      "ff48_abbr": "FabPr",
+      "sic_lo": 3444,
+      "sic_hi": 3444
+    },
+    {
+      "ff48_num": 20,
+      "ff48_abbr": "FabPr",
+      "sic_lo": 3460,
+      "sic_hi": 3469
+    },
+    {
+      "ff48_num": 20,
+      "ff48_abbr": "FabPr",
+      "sic_lo": 3470,
+      "sic_hi": 3479
+    },
+    {
+      "ff48_num": 21,
+      "ff48_abbr": "Mach",
+      "sic_lo": 3510,
+      "sic_hi": 3519
+    },
+    {
+      "ff48_num": 21,
+      "ff48_abbr": "Mach",
+      "sic_lo": 3520,
+      "sic_hi": 3529
+    },
+    {
+      "ff48_num": 21,
+      "ff48_abbr": "Mach",
+      "sic_lo": 3530,
+      "sic_hi": 3530
+    },
+    {
+      "ff48_num": 21,
+      "ff48_abbr": "Mach",
+      "sic_lo": 3531,
+      "sic_hi": 3531
+    },
+    {
+      "ff48_num": 21,
+      "ff48_abbr": "Mach",
+      "sic_lo": 3532,
+      "sic_hi": 3532
+    },
+    {
+      "ff48_num": 21,
+      "ff48_abbr": "Mach",
+      "sic_lo": 3533,
+      "sic_hi": 3533
+    },
+    {
+      "ff48_num": 21,
+      "ff48_abbr": "Mach",
+      "sic_lo": 3534,
+      "sic_hi": 3534
+    },
+    {
+      "ff48_num": 21,
+      "ff48_abbr": "Mach",
+      "sic_lo": 3535,
+      "sic_hi": 3535
+    },
+    {
+      "ff48_num": 21,
+      "ff48_abbr": "Mach",
+      "sic_lo": 3536,
+      "sic_hi": 3536
+    },
+    {
+      "ff48_num": 21,
+      "ff48_abbr": "Mach",
+      "sic_lo": 3538,
+      "sic_hi": 3538
+    },
+    {
+      "ff48_num": 21,
+      "ff48_abbr": "Mach",
+      "sic_lo": 3540,
+      "sic_hi": 3549
+    },
+    {
+      "ff48_num": 21,
+      "ff48_abbr": "Mach",
+      "sic_lo": 3550,
+      "sic_hi": 3559
+    },
+    {
+      "ff48_num": 21,
+      "ff48_abbr": "Mach",
+      "sic_lo": 3560,
+      "sic_hi": 3569
+    },
+    {
+      "ff48_num": 21,
+      "ff48_abbr": "Mach",
+      "sic_lo": 3580,
+      "sic_hi": 3580
+    },
+    {
+      "ff48_num": 21,
+      "ff48_abbr": "Mach",
+      "sic_lo": 3581,
+      "sic_hi": 3581
+    },
+    {
+      "ff48_num": 21,
+      "ff48_abbr": "Mach",
+      "sic_lo": 3582,
+      "sic_hi": 3582
+    },
+    {
+      "ff48_num": 21,
+      "ff48_abbr": "Mach",
+      "sic_lo": 3585,
+      "sic_hi": 3585
+    },
+    {
+      "ff48_num": 21,
+      "ff48_abbr": "Mach",
+      "sic_lo": 3586,
+      "sic_hi": 3586
+    },
+    {
+      "ff48_num": 21,
+      "ff48_abbr": "Mach",
+      "sic_lo": 3589,
+      "sic_hi": 3589
+    },
+    {
+      "ff48_num": 21,
+      "ff48_abbr": "Mach",
+      "sic_lo": 3590,
+      "sic_hi": 3599
+    },
+    {
+      "ff48_num": 22,
+      "ff48_abbr": "ElcEq",
+      "sic_lo": 3600,
+      "sic_hi": 3600
+    },
+    {
+      "ff48_num": 22,
+      "ff48_abbr": "ElcEq",
+      "sic_lo": 3610,
+      "sic_hi": 3613
+    },
+    {
+      "ff48_num": 22,
+      "ff48_abbr": "ElcEq",
+      "sic_lo": 3620,
+      "sic_hi": 3621
+    },
+    {
+      "ff48_num": 22,
+      "ff48_abbr": "ElcEq",
+      "sic_lo": 3623,
+      "sic_hi": 3629
+    },
+    {
+      "ff48_num": 22,
+      "ff48_abbr": "ElcEq",
+      "sic_lo": 3640,
+      "sic_hi": 3644
+    },
+    {
+      "ff48_num": 22,
+      "ff48_abbr": "ElcEq",
+      "sic_lo": 3645,
+      "sic_hi": 3645
+    },
+    {
+      "ff48_num": 22,
+      "ff48_abbr": "ElcEq",
+      "sic_lo": 3646,
+      "sic_hi": 3646
+    },
+    {
+      "ff48_num": 22,
+      "ff48_abbr": "ElcEq",
+      "sic_lo": 3648,
+      "sic_hi": 3649
+    },
+    {
+      "ff48_num": 22,
+      "ff48_abbr": "ElcEq",
+      "sic_lo": 3660,
+      "sic_hi": 3660
+    },
+    {
+      "ff48_num": 22,
+      "ff48_abbr": "ElcEq",
+      "sic_lo": 3690,
+      "sic_hi": 3690
+    },
+    {
+      "ff48_num": 22,
+      "ff48_abbr": "ElcEq",
+      "sic_lo": 3691,
+      "sic_hi": 3692
+    },
+    {
+      "ff48_num": 22,
+      "ff48_abbr": "ElcEq",
+      "sic_lo": 3699,
+      "sic_hi": 3699
+    },
+    {
+      "ff48_num": 23,
+      "ff48_abbr": "Autos",
+      "sic_lo": 2296,
+      "sic_hi": 2296
+    },
+    {
+      "ff48_num": 23,
+      "ff48_abbr": "Autos",
+      "sic_lo": 2396,
+      "sic_hi": 2396
+    },
+    {
+      "ff48_num": 23,
+      "ff48_abbr": "Autos",
+      "sic_lo": 3010,
+      "sic_hi": 3011
+    },
+    {
+      "ff48_num": 23,
+      "ff48_abbr": "Autos",
+      "sic_lo": 3537,
+      "sic_hi": 3537
+    },
+    {
+      "ff48_num": 23,
+      "ff48_abbr": "Autos",
+      "sic_lo": 3647,
+      "sic_hi": 3647
+    },
+    {
+      "ff48_num": 23,
+      "ff48_abbr": "Autos",
+      "sic_lo": 3694,
+      "sic_hi": 3694
+    },
+    {
+      "ff48_num": 23,
+      "ff48_abbr": "Autos",
+      "sic_lo": 3700,
+      "sic_hi": 3700
+    },
+    {
+      "ff48_num": 23,
+      "ff48_abbr": "Autos",
+      "sic_lo": 3710,
+      "sic_hi": 3710
+    },
+    {
+      "ff48_num": 23,
+      "ff48_abbr": "Autos",
+      "sic_lo": 3711,
+      "sic_hi": 3711
+    },
+    {
+      "ff48_num": 23,
+      "ff48_abbr": "Autos",
+      "sic_lo": 3713,
+      "sic_hi": 3713
+    },
+    {
+      "ff48_num": 23,
+      "ff48_abbr": "Autos",
+      "sic_lo": 3714,
+      "sic_hi": 3714
+    },
+    {
+      "ff48_num": 23,
+      "ff48_abbr": "Autos",
+      "sic_lo": 3715,
+      "sic_hi": 3715
+    },
+    {
+      "ff48_num": 23,
+      "ff48_abbr": "Autos",
+      "sic_lo": 3716,
+      "sic_hi": 3716
+    },
+    {
+      "ff48_num": 23,
+      "ff48_abbr": "Autos",
+      "sic_lo": 3792,
+      "sic_hi": 3792
+    },
+    {
+      "ff48_num": 23,
+      "ff48_abbr": "Autos",
+      "sic_lo": 3790,
+      "sic_hi": 3791
+    },
+    {
+      "ff48_num": 23,
+      "ff48_abbr": "Autos",
+      "sic_lo": 3799,
+      "sic_hi": 3799
+    },
+    {
+      "ff48_num": 24,
+      "ff48_abbr": "Aero",
+      "sic_lo": 3720,
+      "sic_hi": 3720
+    },
+    {
+      "ff48_num": 24,
+      "ff48_abbr": "Aero",
+      "sic_lo": 3721,
+      "sic_hi": 3721
+    },
+    {
+      "ff48_num": 24,
+      "ff48_abbr": "Aero",
+      "sic_lo": 3723,
+      "sic_hi": 3724
+    },
+    {
+      "ff48_num": 24,
+      "ff48_abbr": "Aero",
+      "sic_lo": 3725,
+      "sic_hi": 3725
+    },
+    {
+      "ff48_num": 24,
+      "ff48_abbr": "Aero",
+      "sic_lo": 3728,
+      "sic_hi": 3729
+    },
+    {
+      "ff48_num": 25,
+      "ff48_abbr": "Ships",
+      "sic_lo": 3730,
+      "sic_hi": 3731
+    },
+    {
+      "ff48_num": 25,
+      "ff48_abbr": "Ships",
+      "sic_lo": 3740,
+      "sic_hi": 3743
+    },
+    {
+      "ff48_num": 26,
+      "ff48_abbr": "Guns",
+      "sic_lo": 3760,
+      "sic_hi": 3769
+    },
+    {
+      "ff48_num": 26,
+      "ff48_abbr": "Guns",
+      "sic_lo": 3795,
+      "sic_hi": 3795
+    },
+    {
+      "ff48_num": 26,
+      "ff48_abbr": "Guns",
+      "sic_lo": 3480,
+      "sic_hi": 3489
+    },
+    {
+      "ff48_num": 27,
+      "ff48_abbr": "Gold",
+      "sic_lo": 1040,
+      "sic_hi": 1049
+    },
+    {
+      "ff48_num": 28,
+      "ff48_abbr": "Mines",
+      "sic_lo": 1000,
+      "sic_hi": 1009
+    },
+    {
+      "ff48_num": 28,
+      "ff48_abbr": "Mines",
+      "sic_lo": 1010,
+      "sic_hi": 1019
+    },
+    {
+      "ff48_num": 28,
+      "ff48_abbr": "Mines",
+      "sic_lo": 1020,
+      "sic_hi": 1029
+    },
+    {
+      "ff48_num": 28,
+      "ff48_abbr": "Mines",
+      "sic_lo": 1030,
+      "sic_hi": 1039
+    },
+    {
+      "ff48_num": 28,
+      "ff48_abbr": "Mines",
+      "sic_lo": 1050,
+      "sic_hi": 1059
+    },
+    {
+      "ff48_num": 28,
+      "ff48_abbr": "Mines",
+      "sic_lo": 1060,
+      "sic_hi": 1069
+    },
+    {
+      "ff48_num": 28,
+      "ff48_abbr": "Mines",
+      "sic_lo": 1070,
+      "sic_hi": 1079
+    },
+    {
+      "ff48_num": 28,
+      "ff48_abbr": "Mines",
+      "sic_lo": 1080,
+      "sic_hi": 1089
+    },
+    {
+      "ff48_num": 28,
+      "ff48_abbr": "Mines",
+      "sic_lo": 1090,
+      "sic_hi": 1099
+    },
+    {
+      "ff48_num": 28,
+      "ff48_abbr": "Mines",
+      "sic_lo": 1100,
+      "sic_hi": 1119
+    },
+    {
+      "ff48_num": 28,
+      "ff48_abbr": "Mines",
+      "sic_lo": 1400,
+      "sic_hi": 1499
+    },
+    {
+      "ff48_num": 29,
+      "ff48_abbr": "Coal",
+      "sic_lo": 1200,
+      "sic_hi": 1299
+    },
+    {
+      "ff48_num": 30,
+      "ff48_abbr": "Oil",
+      "sic_lo": 1300,
+      "sic_hi": 1300
+    },
+    {
+      "ff48_num": 30,
+      "ff48_abbr": "Oil",
+      "sic_lo": 1310,
+      "sic_hi": 1319
+    },
+    {
+      "ff48_num": 30,
+      "ff48_abbr": "Oil",
+      "sic_lo": 1320,
+      "sic_hi": 1329
+    },
+    {
+      "ff48_num": 30,
+      "ff48_abbr": "Oil",
+      "sic_lo": 1330,
+      "sic_hi": 1339
+    },
+    {
+      "ff48_num": 30,
+      "ff48_abbr": "Oil",
+      "sic_lo": 1370,
+      "sic_hi": 1379
+    },
+    {
+      "ff48_num": 30,
+      "ff48_abbr": "Oil",
+      "sic_lo": 1380,
+      "sic_hi": 1380
+    },
+    {
+      "ff48_num": 30,
+      "ff48_abbr": "Oil",
+      "sic_lo": 1381,
+      "sic_hi": 1381
+    },
+    {
+      "ff48_num": 30,
+      "ff48_abbr": "Oil",
+      "sic_lo": 1382,
+      "sic_hi": 1382
+    },
+    {
+      "ff48_num": 30,
+      "ff48_abbr": "Oil",
+      "sic_lo": 1389,
+      "sic_hi": 1389
+    },
+    {
+      "ff48_num": 30,
+      "ff48_abbr": "Oil",
+      "sic_lo": 2900,
+      "sic_hi": 2912
+    },
+    {
+      "ff48_num": 30,
+      "ff48_abbr": "Oil",
+      "sic_lo": 2990,
+      "sic_hi": 2999
+    },
+    {
+      "ff48_num": 31,
+      "ff48_abbr": "Util",
+      "sic_lo": 4900,
+      "sic_hi": 4900
+    },
+    {
+      "ff48_num": 31,
+      "ff48_abbr": "Util",
+      "sic_lo": 4910,
+      "sic_hi": 4911
+    },
+    {
+      "ff48_num": 31,
+      "ff48_abbr": "Util",
+      "sic_lo": 4920,
+      "sic_hi": 4922
+    },
+    {
+      "ff48_num": 31,
+      "ff48_abbr": "Util",
+      "sic_lo": 4923,
+      "sic_hi": 4923
+    },
+    {
+      "ff48_num": 31,
+      "ff48_abbr": "Util",
+      "sic_lo": 4924,
+      "sic_hi": 4925
+    },
+    {
+      "ff48_num": 31,
+      "ff48_abbr": "Util",
+      "sic_lo": 4930,
+      "sic_hi": 4931
+    },
+    {
+      "ff48_num": 31,
+      "ff48_abbr": "Util",
+      "sic_lo": 4932,
+      "sic_hi": 4932
+    },
+    {
+      "ff48_num": 31,
+      "ff48_abbr": "Util",
+      "sic_lo": 4939,
+      "sic_hi": 4939
+    },
+    {
+      "ff48_num": 31,
+      "ff48_abbr": "Util",
+      "sic_lo": 4940,
+      "sic_hi": 4942
+    },
+    {
+      "ff48_num": 32,
+      "ff48_abbr": "Telcm",
+      "sic_lo": 4800,
+      "sic_hi": 4800
+    },
+    {
+      "ff48_num": 32,
+      "ff48_abbr": "Telcm",
+      "sic_lo": 4810,
+      "sic_hi": 4813
+    },
+    {
+      "ff48_num": 32,
+      "ff48_abbr": "Telcm",
+      "sic_lo": 4820,
+      "sic_hi": 4822
+    },
+    {
+      "ff48_num": 32,
+      "ff48_abbr": "Telcm",
+      "sic_lo": 4830,
+      "sic_hi": 4839
+    },
+    {
+      "ff48_num": 32,
+      "ff48_abbr": "Telcm",
+      "sic_lo": 4840,
+      "sic_hi": 4841
+    },
+    {
+      "ff48_num": 32,
+      "ff48_abbr": "Telcm",
+      "sic_lo": 4880,
+      "sic_hi": 4889
+    },
+    {
+      "ff48_num": 32,
+      "ff48_abbr": "Telcm",
+      "sic_lo": 4890,
+      "sic_hi": 4890
+    },
+    {
+      "ff48_num": 32,
+      "ff48_abbr": "Telcm",
+      "sic_lo": 4891,
+      "sic_hi": 4891
+    },
+    {
+      "ff48_num": 32,
+      "ff48_abbr": "Telcm",
+      "sic_lo": 4892,
+      "sic_hi": 4892
+    },
+    {
+      "ff48_num": 32,
+      "ff48_abbr": "Telcm",
+      "sic_lo": 4899,
+      "sic_hi": 4899
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7020,
+      "sic_hi": 7021
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7030,
+      "sic_hi": 7033
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7200,
+      "sic_hi": 7200
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7210,
+      "sic_hi": 7212
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7214,
+      "sic_hi": 7214
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7215,
+      "sic_hi": 7216
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7217,
+      "sic_hi": 7217
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7219,
+      "sic_hi": 7219
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7220,
+      "sic_hi": 7221
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7230,
+      "sic_hi": 7231
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7240,
+      "sic_hi": 7241
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7250,
+      "sic_hi": 7251
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7260,
+      "sic_hi": 7269
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7270,
+      "sic_hi": 7290
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7291,
+      "sic_hi": 7291
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7292,
+      "sic_hi": 7299
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7395,
+      "sic_hi": 7395
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7500,
+      "sic_hi": 7500
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7520,
+      "sic_hi": 7529
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7530,
+      "sic_hi": 7539
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7540,
+      "sic_hi": 7549
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7600,
+      "sic_hi": 7600
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7620,
+      "sic_hi": 7620
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7622,
+      "sic_hi": 7622
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7623,
+      "sic_hi": 7623
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7629,
+      "sic_hi": 7629
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7630,
+      "sic_hi": 7631
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7640,
+      "sic_hi": 7641
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7690,
+      "sic_hi": 7699
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 8100,
+      "sic_hi": 8199
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 8200,
+      "sic_hi": 8299
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 8300,
+      "sic_hi": 8399
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 8400,
+      "sic_hi": 8499
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 8600,
+      "sic_hi": 8699
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 8800,
+      "sic_hi": 8899
+    },
+    {
+      "ff48_num": 33,
+      "ff48_abbr": "PerSv",
+      "sic_lo": 7510,
+      "sic_hi": 7515
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 2750,
+      "sic_hi": 2759
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 3993,
+      "sic_hi": 3993
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7218,
+      "sic_hi": 7218
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7300,
+      "sic_hi": 7300
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7310,
+      "sic_hi": 7319
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7320,
+      "sic_hi": 7329
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7330,
+      "sic_hi": 7339
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7340,
+      "sic_hi": 7342
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7349,
+      "sic_hi": 7349
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7350,
+      "sic_hi": 7351
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7352,
+      "sic_hi": 7352
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7353,
+      "sic_hi": 7353
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7359,
+      "sic_hi": 7359
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7360,
+      "sic_hi": 7369
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7370,
+      "sic_hi": 7372
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7374,
+      "sic_hi": 7374
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7375,
+      "sic_hi": 7375
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7376,
+      "sic_hi": 7376
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7377,
+      "sic_hi": 7377
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7378,
+      "sic_hi": 7378
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7379,
+      "sic_hi": 7379
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7380,
+      "sic_hi": 7380
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7381,
+      "sic_hi": 7382
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7383,
+      "sic_hi": 7383
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7384,
+      "sic_hi": 7384
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7385,
+      "sic_hi": 7385
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7389,
+      "sic_hi": 7390
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7391,
+      "sic_hi": 7391
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7392,
+      "sic_hi": 7392
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7393,
+      "sic_hi": 7393
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7394,
+      "sic_hi": 7394
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7396,
+      "sic_hi": 7396
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7397,
+      "sic_hi": 7397
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7399,
+      "sic_hi": 7399
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 7519,
+      "sic_hi": 7519
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 8700,
+      "sic_hi": 8700
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 8710,
+      "sic_hi": 8713
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 8720,
+      "sic_hi": 8721
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 8730,
+      "sic_hi": 8734
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 8740,
+      "sic_hi": 8748
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 8900,
+      "sic_hi": 8910
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 8911,
+      "sic_hi": 8911
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 8920,
+      "sic_hi": 8999
+    },
+    {
+      "ff48_num": 34,
+      "ff48_abbr": "BusSv",
+      "sic_lo": 4220,
+      "sic_hi": 4229
+    },
+    {
+      "ff48_num": 35,
+      "ff48_abbr": "Comps",
+      "sic_lo": 3570,
+      "sic_hi": 3579
+    },
+    {
+      "ff48_num": 35,
+      "ff48_abbr": "Comps",
+      "sic_lo": 3680,
+      "sic_hi": 3680
+    },
+    {
+      "ff48_num": 35,
+      "ff48_abbr": "Comps",
+      "sic_lo": 3681,
+      "sic_hi": 3681
+    },
+    {
+      "ff48_num": 35,
+      "ff48_abbr": "Comps",
+      "sic_lo": 3682,
+      "sic_hi": 3682
+    },
+    {
+      "ff48_num": 35,
+      "ff48_abbr": "Comps",
+      "sic_lo": 3683,
+      "sic_hi": 3683
+    },
+    {
+      "ff48_num": 35,
+      "ff48_abbr": "Comps",
+      "sic_lo": 3684,
+      "sic_hi": 3684
+    },
+    {
+      "ff48_num": 35,
+      "ff48_abbr": "Comps",
+      "sic_lo": 3685,
+      "sic_hi": 3685
+    },
+    {
+      "ff48_num": 35,
+      "ff48_abbr": "Comps",
+      "sic_lo": 3686,
+      "sic_hi": 3686
+    },
+    {
+      "ff48_num": 35,
+      "ff48_abbr": "Comps",
+      "sic_lo": 3687,
+      "sic_hi": 3687
+    },
+    {
+      "ff48_num": 35,
+      "ff48_abbr": "Comps",
+      "sic_lo": 3688,
+      "sic_hi": 3688
+    },
+    {
+      "ff48_num": 35,
+      "ff48_abbr": "Comps",
+      "sic_lo": 3689,
+      "sic_hi": 3689
+    },
+    {
+      "ff48_num": 35,
+      "ff48_abbr": "Comps",
+      "sic_lo": 3695,
+      "sic_hi": 3695
+    },
+    {
+      "ff48_num": 35,
+      "ff48_abbr": "Comps",
+      "sic_lo": 7373,
+      "sic_hi": 7373
+    },
+    {
+      "ff48_num": 36,
+      "ff48_abbr": "Chips",
+      "sic_lo": 3622,
+      "sic_hi": 3622
+    },
+    {
+      "ff48_num": 36,
+      "ff48_abbr": "Chips",
+      "sic_lo": 3661,
+      "sic_hi": 3661
+    },
+    {
+      "ff48_num": 36,
+      "ff48_abbr": "Chips",
+      "sic_lo": 3662,
+      "sic_hi": 3662
+    },
+    {
+      "ff48_num": 36,
+      "ff48_abbr": "Chips",
+      "sic_lo": 3663,
+      "sic_hi": 3663
+    },
+    {
+      "ff48_num": 36,
+      "ff48_abbr": "Chips",
+      "sic_lo": 3664,
+      "sic_hi": 3664
+    },
+    {
+      "ff48_num": 36,
+      "ff48_abbr": "Chips",
+      "sic_lo": 3665,
+      "sic_hi": 3665
+    },
+    {
+      "ff48_num": 36,
+      "ff48_abbr": "Chips",
+      "sic_lo": 3666,
+      "sic_hi": 3666
+    },
+    {
+      "ff48_num": 36,
+      "ff48_abbr": "Chips",
+      "sic_lo": 3669,
+      "sic_hi": 3669
+    },
+    {
+      "ff48_num": 36,
+      "ff48_abbr": "Chips",
+      "sic_lo": 3670,
+      "sic_hi": 3679
+    },
+    {
+      "ff48_num": 36,
+      "ff48_abbr": "Chips",
+      "sic_lo": 3810,
+      "sic_hi": 3810
+    },
+    {
+      "ff48_num": 36,
+      "ff48_abbr": "Chips",
+      "sic_lo": 3812,
+      "sic_hi": 3812
+    },
+    {
+      "ff48_num": 37,
+      "ff48_abbr": "LabEq",
+      "sic_lo": 3811,
+      "sic_hi": 3811
+    },
+    {
+      "ff48_num": 37,
+      "ff48_abbr": "LabEq",
+      "sic_lo": 3820,
+      "sic_hi": 3820
+    },
+    {
+      "ff48_num": 37,
+      "ff48_abbr": "LabEq",
+      "sic_lo": 3821,
+      "sic_hi": 3821
+    },
+    {
+      "ff48_num": 37,
+      "ff48_abbr": "LabEq",
+      "sic_lo": 3822,
+      "sic_hi": 3822
+    },
+    {
+      "ff48_num": 37,
+      "ff48_abbr": "LabEq",
+      "sic_lo": 3823,
+      "sic_hi": 3823
+    },
+    {
+      "ff48_num": 37,
+      "ff48_abbr": "LabEq",
+      "sic_lo": 3824,
+      "sic_hi": 3824
+    },
+    {
+      "ff48_num": 37,
+      "ff48_abbr": "LabEq",
+      "sic_lo": 3825,
+      "sic_hi": 3825
+    },
+    {
+      "ff48_num": 37,
+      "ff48_abbr": "LabEq",
+      "sic_lo": 3826,
+      "sic_hi": 3826
+    },
+    {
+      "ff48_num": 37,
+      "ff48_abbr": "LabEq",
+      "sic_lo": 3827,
+      "sic_hi": 3827
+    },
+    {
+      "ff48_num": 37,
+      "ff48_abbr": "LabEq",
+      "sic_lo": 3829,
+      "sic_hi": 3829
+    },
+    {
+      "ff48_num": 37,
+      "ff48_abbr": "LabEq",
+      "sic_lo": 3830,
+      "sic_hi": 3839
+    },
+    {
+      "ff48_num": 38,
+      "ff48_abbr": "Paper",
+      "sic_lo": 2520,
+      "sic_hi": 2549
+    },
+    {
+      "ff48_num": 38,
+      "ff48_abbr": "Paper",
+      "sic_lo": 2600,
+      "sic_hi": 2639
+    },
+    {
+      "ff48_num": 38,
+      "ff48_abbr": "Paper",
+      "sic_lo": 2670,
+      "sic_hi": 2699
+    },
+    {
+      "ff48_num": 38,
+      "ff48_abbr": "Paper",
+      "sic_lo": 2760,
+      "sic_hi": 2761
+    },
+    {
+      "ff48_num": 38,
+      "ff48_abbr": "Paper",
+      "sic_lo": 3950,
+      "sic_hi": 3955
+    },
+    {
+      "ff48_num": 39,
+      "ff48_abbr": "Boxes",
+      "sic_lo": 2440,
+      "sic_hi": 2449
+    },
+    {
+      "ff48_num": 39,
+      "ff48_abbr": "Boxes",
+      "sic_lo": 2640,
+      "sic_hi": 2659
+    },
+    {
+      "ff48_num": 39,
+      "ff48_abbr": "Boxes",
+      "sic_lo": 3220,
+      "sic_hi": 3221
+    },
+    {
+      "ff48_num": 39,
+      "ff48_abbr": "Boxes",
+      "sic_lo": 3410,
+      "sic_hi": 3412
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4000,
+      "sic_hi": 4013
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4040,
+      "sic_hi": 4049
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4100,
+      "sic_hi": 4100
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4110,
+      "sic_hi": 4119
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4120,
+      "sic_hi": 4121
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4130,
+      "sic_hi": 4131
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4140,
+      "sic_hi": 4142
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4150,
+      "sic_hi": 4151
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4170,
+      "sic_hi": 4173
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4190,
+      "sic_hi": 4199
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4200,
+      "sic_hi": 4200
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4210,
+      "sic_hi": 4219
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4230,
+      "sic_hi": 4231
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4240,
+      "sic_hi": 4249
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4400,
+      "sic_hi": 4499
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4500,
+      "sic_hi": 4599
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4600,
+      "sic_hi": 4699
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4700,
+      "sic_hi": 4700
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4710,
+      "sic_hi": 4712
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4720,
+      "sic_hi": 4729
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4730,
+      "sic_hi": 4739
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4740,
+      "sic_hi": 4749
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4780,
+      "sic_hi": 4780
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4782,
+      "sic_hi": 4782
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4783,
+      "sic_hi": 4783
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4784,
+      "sic_hi": 4784
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4785,
+      "sic_hi": 4785
+    },
+    {
+      "ff48_num": 40,
+      "ff48_abbr": "Trans",
+      "sic_lo": 4789,
+      "sic_hi": 4789
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5000,
+      "sic_hi": 5000
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5010,
+      "sic_hi": 5015
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5020,
+      "sic_hi": 5023
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5030,
+      "sic_hi": 5039
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5040,
+      "sic_hi": 5042
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5043,
+      "sic_hi": 5043
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5044,
+      "sic_hi": 5044
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5045,
+      "sic_hi": 5045
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5046,
+      "sic_hi": 5046
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5047,
+      "sic_hi": 5047
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5048,
+      "sic_hi": 5048
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5049,
+      "sic_hi": 5049
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5050,
+      "sic_hi": 5059
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5060,
+      "sic_hi": 5060
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5063,
+      "sic_hi": 5063
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5064,
+      "sic_hi": 5064
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5065,
+      "sic_hi": 5065
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5070,
+      "sic_hi": 5078
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5080,
+      "sic_hi": 5080
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5081,
+      "sic_hi": 5081
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5082,
+      "sic_hi": 5082
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5083,
+      "sic_hi": 5083
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5084,
+      "sic_hi": 5084
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5085,
+      "sic_hi": 5085
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5086,
+      "sic_hi": 5087
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5088,
+      "sic_hi": 5088
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5090,
+      "sic_hi": 5090
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5091,
+      "sic_hi": 5092
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5093,
+      "sic_hi": 5093
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5094,
+      "sic_hi": 5094
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5099,
+      "sic_hi": 5099
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5100,
+      "sic_hi": 5100
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5110,
+      "sic_hi": 5113
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5120,
+      "sic_hi": 5122
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5130,
+      "sic_hi": 5139
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5140,
+      "sic_hi": 5149
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5150,
+      "sic_hi": 5159
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5160,
+      "sic_hi": 5169
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5170,
+      "sic_hi": 5172
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5180,
+      "sic_hi": 5182
+    },
+    {
+      "ff48_num": 41,
+      "ff48_abbr": "Whlsl",
+      "sic_lo": 5190,
+      "sic_hi": 5199
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5200,
+      "sic_hi": 5200
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5210,
+      "sic_hi": 5219
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5220,
+      "sic_hi": 5229
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5230,
+      "sic_hi": 5231
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5250,
+      "sic_hi": 5251
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5260,
+      "sic_hi": 5261
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5270,
+      "sic_hi": 5271
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5300,
+      "sic_hi": 5300
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5310,
+      "sic_hi": 5311
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5320,
+      "sic_hi": 5320
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5330,
+      "sic_hi": 5331
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5334,
+      "sic_hi": 5334
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5340,
+      "sic_hi": 5349
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5390,
+      "sic_hi": 5399
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5400,
+      "sic_hi": 5400
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5410,
+      "sic_hi": 5411
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5412,
+      "sic_hi": 5412
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5420,
+      "sic_hi": 5429
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5430,
+      "sic_hi": 5439
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5440,
+      "sic_hi": 5449
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5450,
+      "sic_hi": 5459
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5460,
+      "sic_hi": 5469
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5490,
+      "sic_hi": 5499
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5500,
+      "sic_hi": 5500
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5510,
+      "sic_hi": 5529
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5530,
+      "sic_hi": 5539
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5540,
+      "sic_hi": 5549
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5550,
+      "sic_hi": 5559
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5560,
+      "sic_hi": 5569
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5570,
+      "sic_hi": 5579
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5590,
+      "sic_hi": 5599
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5600,
+      "sic_hi": 5699
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5700,
+      "sic_hi": 5700
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5710,
+      "sic_hi": 5719
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5720,
+      "sic_hi": 5722
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5730,
+      "sic_hi": 5733
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5734,
+      "sic_hi": 5734
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5735,
+      "sic_hi": 5735
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5736,
+      "sic_hi": 5736
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5750,
+      "sic_hi": 5799
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5900,
+      "sic_hi": 5900
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5910,
+      "sic_hi": 5912
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5920,
+      "sic_hi": 5929
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5930,
+      "sic_hi": 5932
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5940,
+      "sic_hi": 5940
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5941,
+      "sic_hi": 5941
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5942,
+      "sic_hi": 5942
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5943,
+      "sic_hi": 5943
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5944,
+      "sic_hi": 5944
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5945,
+      "sic_hi": 5945
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5946,
+      "sic_hi": 5946
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5947,
+      "sic_hi": 5947
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5948,
+      "sic_hi": 5948
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5949,
+      "sic_hi": 5949
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5950,
+      "sic_hi": 5959
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5960,
+      "sic_hi": 5969
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5970,
+      "sic_hi": 5979
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5980,
+      "sic_hi": 5989
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5990,
+      "sic_hi": 5990
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5992,
+      "sic_hi": 5992
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5993,
+      "sic_hi": 5993
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5994,
+      "sic_hi": 5994
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5995,
+      "sic_hi": 5995
+    },
+    {
+      "ff48_num": 42,
+      "ff48_abbr": "Rtail",
+      "sic_lo": 5999,
+      "sic_hi": 5999
+    },
+    {
+      "ff48_num": 43,
+      "ff48_abbr": "Meals",
+      "sic_lo": 5800,
+      "sic_hi": 5819
+    },
+    {
+      "ff48_num": 43,
+      "ff48_abbr": "Meals",
+      "sic_lo": 5820,
+      "sic_hi": 5829
+    },
+    {
+      "ff48_num": 43,
+      "ff48_abbr": "Meals",
+      "sic_lo": 5890,
+      "sic_hi": 5899
+    },
+    {
+      "ff48_num": 43,
+      "ff48_abbr": "Meals",
+      "sic_lo": 7000,
+      "sic_hi": 7000
+    },
+    {
+      "ff48_num": 43,
+      "ff48_abbr": "Meals",
+      "sic_lo": 7010,
+      "sic_hi": 7019
+    },
+    {
+      "ff48_num": 43,
+      "ff48_abbr": "Meals",
+      "sic_lo": 7040,
+      "sic_hi": 7049
+    },
+    {
+      "ff48_num": 43,
+      "ff48_abbr": "Meals",
+      "sic_lo": 7213,
+      "sic_hi": 7213
+    },
+    {
+      "ff48_num": 44,
+      "ff48_abbr": "Banks",
+      "sic_lo": 6000,
+      "sic_hi": 6000
+    },
+    {
+      "ff48_num": 44,
+      "ff48_abbr": "Banks",
+      "sic_lo": 6010,
+      "sic_hi": 6019
+    },
+    {
+      "ff48_num": 44,
+      "ff48_abbr": "Banks",
+      "sic_lo": 6020,
+      "sic_hi": 6020
+    },
+    {
+      "ff48_num": 44,
+      "ff48_abbr": "Banks",
+      "sic_lo": 6021,
+      "sic_hi": 6021
+    },
+    {
+      "ff48_num": 44,
+      "ff48_abbr": "Banks",
+      "sic_lo": 6022,
+      "sic_hi": 6022
+    },
+    {
+      "ff48_num": 44,
+      "ff48_abbr": "Banks",
+      "sic_lo": 6023,
+      "sic_hi": 6024
+    },
+    {
+      "ff48_num": 44,
+      "ff48_abbr": "Banks",
+      "sic_lo": 6025,
+      "sic_hi": 6025
+    },
+    {
+      "ff48_num": 44,
+      "ff48_abbr": "Banks",
+      "sic_lo": 6026,
+      "sic_hi": 6026
+    },
+    {
+      "ff48_num": 44,
+      "ff48_abbr": "Banks",
+      "sic_lo": 6027,
+      "sic_hi": 6027
+    },
+    {
+      "ff48_num": 44,
+      "ff48_abbr": "Banks",
+      "sic_lo": 6028,
+      "sic_hi": 6029
+    },
+    {
+      "ff48_num": 44,
+      "ff48_abbr": "Banks",
+      "sic_lo": 6030,
+      "sic_hi": 6036
+    },
+    {
+      "ff48_num": 44,
+      "ff48_abbr": "Banks",
+      "sic_lo": 6040,
+      "sic_hi": 6059
+    },
+    {
+      "ff48_num": 44,
+      "ff48_abbr": "Banks",
+      "sic_lo": 6060,
+      "sic_hi": 6062
+    },
+    {
+      "ff48_num": 44,
+      "ff48_abbr": "Banks",
+      "sic_lo": 6080,
+      "sic_hi": 6082
+    },
+    {
+      "ff48_num": 44,
+      "ff48_abbr": "Banks",
+      "sic_lo": 6090,
+      "sic_hi": 6099
+    },
+    {
+      "ff48_num": 44,
+      "ff48_abbr": "Banks",
+      "sic_lo": 6100,
+      "sic_hi": 6100
+    },
+    {
+      "ff48_num": 44,
+      "ff48_abbr": "Banks",
+      "sic_lo": 6110,
+      "sic_hi": 6111
+    },
+    {
+      "ff48_num": 44,
+      "ff48_abbr": "Banks",
+      "sic_lo": 6112,
+      "sic_hi": 6113
+    },
+    {
+      "ff48_num": 44,
+      "ff48_abbr": "Banks",
+      "sic_lo": 6120,
+      "sic_hi": 6129
+    },
+    {
+      "ff48_num": 44,
+      "ff48_abbr": "Banks",
+      "sic_lo": 6130,
+      "sic_hi": 6139
+    },
+    {
+      "ff48_num": 44,
+      "ff48_abbr": "Banks",
+      "sic_lo": 6140,
+      "sic_hi": 6149
+    },
+    {
+      "ff48_num": 44,
+      "ff48_abbr": "Banks",
+      "sic_lo": 6150,
+      "sic_hi": 6159
+    },
+    {
+      "ff48_num": 44,
+      "ff48_abbr": "Banks",
+      "sic_lo": 6160,
+      "sic_hi": 6169
+    },
+    {
+      "ff48_num": 44,
+      "ff48_abbr": "Banks",
+      "sic_lo": 6170,
+      "sic_hi": 6179
+    },
+    {
+      "ff48_num": 44,
+      "ff48_abbr": "Banks",
+      "sic_lo": 6190,
+      "sic_hi": 6199
+    },
+    {
+      "ff48_num": 45,
+      "ff48_abbr": "Insur",
+      "sic_lo": 6300,
+      "sic_hi": 6300
+    },
+    {
+      "ff48_num": 45,
+      "ff48_abbr": "Insur",
+      "sic_lo": 6310,
+      "sic_hi": 6319
+    },
+    {
+      "ff48_num": 45,
+      "ff48_abbr": "Insur",
+      "sic_lo": 6320,
+      "sic_hi": 6329
+    },
+    {
+      "ff48_num": 45,
+      "ff48_abbr": "Insur",
+      "sic_lo": 6330,
+      "sic_hi": 6331
+    },
+    {
+      "ff48_num": 45,
+      "ff48_abbr": "Insur",
+      "sic_lo": 6350,
+      "sic_hi": 6351
+    },
+    {
+      "ff48_num": 45,
+      "ff48_abbr": "Insur",
+      "sic_lo": 6360,
+      "sic_hi": 6361
+    },
+    {
+      "ff48_num": 45,
+      "ff48_abbr": "Insur",
+      "sic_lo": 6370,
+      "sic_hi": 6379
+    },
+    {
+      "ff48_num": 45,
+      "ff48_abbr": "Insur",
+      "sic_lo": 6390,
+      "sic_hi": 6399
+    },
+    {
+      "ff48_num": 45,
+      "ff48_abbr": "Insur",
+      "sic_lo": 6400,
+      "sic_hi": 6411
+    },
+    {
+      "ff48_num": 46,
+      "ff48_abbr": "RlEst",
+      "sic_lo": 6500,
+      "sic_hi": 6500
+    },
+    {
+      "ff48_num": 46,
+      "ff48_abbr": "RlEst",
+      "sic_lo": 6510,
+      "sic_hi": 6510
+    },
+    {
+      "ff48_num": 46,
+      "ff48_abbr": "RlEst",
+      "sic_lo": 6512,
+      "sic_hi": 6512
+    },
+    {
+      "ff48_num": 46,
+      "ff48_abbr": "RlEst",
+      "sic_lo": 6513,
+      "sic_hi": 6513
+    },
+    {
+      "ff48_num": 46,
+      "ff48_abbr": "RlEst",
+      "sic_lo": 6514,
+      "sic_hi": 6514
+    },
+    {
+      "ff48_num": 46,
+      "ff48_abbr": "RlEst",
+      "sic_lo": 6515,
+      "sic_hi": 6515
+    },
+    {
+      "ff48_num": 46,
+      "ff48_abbr": "RlEst",
+      "sic_lo": 6517,
+      "sic_hi": 6519
+    },
+    {
+      "ff48_num": 46,
+      "ff48_abbr": "RlEst",
+      "sic_lo": 6520,
+      "sic_hi": 6529
+    },
+    {
+      "ff48_num": 46,
+      "ff48_abbr": "RlEst",
+      "sic_lo": 6530,
+      "sic_hi": 6531
+    },
+    {
+      "ff48_num": 46,
+      "ff48_abbr": "RlEst",
+      "sic_lo": 6532,
+      "sic_hi": 6532
+    },
+    {
+      "ff48_num": 46,
+      "ff48_abbr": "RlEst",
+      "sic_lo": 6540,
+      "sic_hi": 6541
+    },
+    {
+      "ff48_num": 46,
+      "ff48_abbr": "RlEst",
+      "sic_lo": 6550,
+      "sic_hi": 6553
+    },
+    {
+      "ff48_num": 46,
+      "ff48_abbr": "RlEst",
+      "sic_lo": 6590,
+      "sic_hi": 6599
+    },
+    {
+      "ff48_num": 46,
+      "ff48_abbr": "RlEst",
+      "sic_lo": 6610,
+      "sic_hi": 6611
+    },
+    {
+      "ff48_num": 47,
+      "ff48_abbr": "Fin",
+      "sic_lo": 6200,
+      "sic_hi": 6299
+    },
+    {
+      "ff48_num": 47,
+      "ff48_abbr": "Fin",
+      "sic_lo": 6700,
+      "sic_hi": 6700
+    },
+    {
+      "ff48_num": 47,
+      "ff48_abbr": "Fin",
+      "sic_lo": 6710,
+      "sic_hi": 6719
+    },
+    {
+      "ff48_num": 47,
+      "ff48_abbr": "Fin",
+      "sic_lo": 6720,
+      "sic_hi": 6722
+    },
+    {
+      "ff48_num": 47,
+      "ff48_abbr": "Fin",
+      "sic_lo": 6723,
+      "sic_hi": 6723
+    },
+    {
+      "ff48_num": 47,
+      "ff48_abbr": "Fin",
+      "sic_lo": 6724,
+      "sic_hi": 6724
+    },
+    {
+      "ff48_num": 47,
+      "ff48_abbr": "Fin",
+      "sic_lo": 6725,
+      "sic_hi": 6725
+    },
+    {
+      "ff48_num": 47,
+      "ff48_abbr": "Fin",
+      "sic_lo": 6726,
+      "sic_hi": 6726
+    },
+    {
+      "ff48_num": 47,
+      "ff48_abbr": "Fin",
+      "sic_lo": 6730,
+      "sic_hi": 6733
+    },
+    {
+      "ff48_num": 47,
+      "ff48_abbr": "Fin",
+      "sic_lo": 6740,
+      "sic_hi": 6779
+    },
+    {
+      "ff48_num": 47,
+      "ff48_abbr": "Fin",
+      "sic_lo": 6790,
+      "sic_hi": 6791
+    },
+    {
+      "ff48_num": 47,
+      "ff48_abbr": "Fin",
+      "sic_lo": 6792,
+      "sic_hi": 6792
+    },
+    {
+      "ff48_num": 47,
+      "ff48_abbr": "Fin",
+      "sic_lo": 6793,
+      "sic_hi": 6793
+    },
+    {
+      "ff48_num": 47,
+      "ff48_abbr": "Fin",
+      "sic_lo": 6794,
+      "sic_hi": 6794
+    },
+    {
+      "ff48_num": 47,
+      "ff48_abbr": "Fin",
+      "sic_lo": 6795,
+      "sic_hi": 6795
+    },
+    {
+      "ff48_num": 47,
+      "ff48_abbr": "Fin",
+      "sic_lo": 6798,
+      "sic_hi": 6798
+    },
+    {
+      "ff48_num": 47,
+      "ff48_abbr": "Fin",
+      "sic_lo": 6799,
+      "sic_hi": 6799
+    },
+    {
+      "ff48_num": 48,
+      "ff48_abbr": "Other",
+      "sic_lo": 4950,
+      "sic_hi": 4959
+    },
+    {
+      "ff48_num": 48,
+      "ff48_abbr": "Other",
+      "sic_lo": 4960,
+      "sic_hi": 4961
+    },
+    {
+      "ff48_num": 48,
+      "ff48_abbr": "Other",
+      "sic_lo": 4970,
+      "sic_hi": 4971
+    },
+    {
+      "ff48_num": 48,
+      "ff48_abbr": "Other",
+      "sic_lo": 4990,
+      "sic_hi": 4991
+    }
+  ],
+  "ff48Names": {
+    "AGRIC": "Agriculture",
+    "FOOD": "Food Products",
+    "SODA": "Candy & Soda",
+    "BEER": "Beer & Liquor",
+    "SMOKE": "Tobacco Products",
+    "TOYS": "Recreation",
+    "FUN": "Entertainment",
+    "BOOKS": "Printing and Publishing",
+    "HSHLD": "Consumer Goods",
+    "CLTHS": "Apparel",
+    "HLTH": "Healthcare",
+    "MEDEQ": "Medical Equipment",
+    "DRUGS": "Pharmaceutical Products",
+    "CHEMS": "Chemicals",
+    "RUBBR": "Rubber and Plastic Products",
+    "TXTLS": "Textiles",
+    "BLDMT": "Construction Materials",
+    "CNSTR": "Construction",
+    "STEEL": "Steel Works Etc",
+    "FABPR": "Fabricated Products",
+    "MACH": "Machinery",
+    "ELCEQ": "Electrical Equipment",
+    "AUTOS": "Automobiles and Trucks",
+    "AERO": "Aircraft",
+    "SHIPS": "Shipbuilding, Railroad Equipme",
+    "GUNS": "Defense",
+    "GOLD": "Precious Metals",
+    "MINES": "Non-Metallic and Industrial Me",
+    "COAL": "Coal",
+    "OIL": "Petroleum and Natural Gas",
+    "UTIL": "Utilities",
+    "TELCM": "Communication",
+    "PERSV": "Personal Services",
+    "BUSSV": "Business Services",
+    "COMPS": "Computers",
+    "CHIPS": "Electronic Equipment",
+    "LABEQ": "Measuring and Control Equipmen",
+    "PAPER": "Business Supplies",
+    "BOXES": "Shipping Containers",
+    "TRANS": "Transportation",
+    "WHLSL": "Wholesale",
+    "RTAIL": "Retail",
+    "MEALS": "Restaurants, Hotels, Motels",
+    "BANKS": "Banking",
+    "INSUR": "Insurance",
+    "RLEST": "Real Estate",
+    "FIN": "Trading",
+    "OTHER": "Almost Nothing"
+  }
+}
