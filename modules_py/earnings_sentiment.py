@@ -2,6 +2,7 @@
 
 import json
 import re
+import time
 import anthropic
 
 
@@ -87,12 +88,60 @@ def get_earnings_sentiment(ticker: str) -> dict:
             "reasoning": reasoning,
         }
 
-    except anthropic.RateLimitError as e:
-        return _default_result(f"Rate limited — please try again in a moment.")
+    except anthropic.RateLimitError:
+        # Wait and retry once
+        print(f"  Rate limited on earnings sentiment for {symbol}, retrying in 10s...")
+        time.sleep(10)
+        try:
+            return _retry_sentiment(symbol, client)
+        except Exception:
+            return _default_result("Rate limited — please wait a moment and try again.")
     except anthropic.AuthenticationError as e:
         return _default_result(f"API key error — check ANTHROPIC_API_KEY.")
     except Exception as e:
         return _default_result(f"Earnings analysis error: {type(e).__name__}: {e}")
+
+
+def _retry_sentiment(symbol: str, client: anthropic.Anthropic) -> dict:
+    """Simplified retry with fewer web searches to stay under rate limit."""
+    response = client.messages.create(
+        model="claude-haiku-4-5-20251001",
+        max_tokens=800,
+        tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 2}],
+        messages=[{
+            "role": "user",
+            "content": (
+                f"Search for {symbol} most recent earnings results. "
+                "Then respond with ONLY this JSON:\n"
+                '{"quarter":"Q4 2025","score":7,"signal":"Green",'
+                '"reasoning":"2-3 sentence analysis"}\n'
+                "Score 1-10, signal Green/Yellow/Red. JSON only."
+            ),
+        }],
+    )
+
+    text_parts = [b.text.strip() for b in response.content if b.type == "text" and b.text.strip()]
+    text = "\n".join(text_parts)
+    json_match = re.search(r"\{[\s\S]*\}", text)
+    if not json_match:
+        return _default_result("Could not parse earnings data on retry.")
+
+    parsed = json.loads(json_match.group())
+    score = max(1.0, min(10.0, float(parsed.get("score", 5))))
+    signal = parsed.get("signal", "Yellow")
+    if signal not in ("Green", "Yellow", "Red"):
+        signal = "Green" if score >= 6.5 else ("Yellow" if score >= 4.0 else "Red")
+    reasoning = parsed.get("reasoning", "Analysis complete.")
+    quarter = parsed.get("quarter", "").strip()
+    if quarter:
+        reasoning = f"[{quarter}] {reasoning}"
+
+    return {
+        "name": "Earnings Sentiment",
+        "score": round(score, 1),
+        "signal": signal,
+        "reasoning": reasoning,
+    }
 
 
 def _default_result(reason: str) -> dict:

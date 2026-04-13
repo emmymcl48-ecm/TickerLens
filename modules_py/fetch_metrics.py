@@ -7,7 +7,8 @@ def fetch_metrics(ticker: str) -> dict:
     """Return a flat dict of financial metrics for the given ticker.
 
     Tries yfinance first. If Yahoo blocks the request (common on cloud IPs),
-    falls back to Claude with web search.
+    falls back to Claude (no web search — uses training knowledge to avoid
+    burning rate limit, since earnings sentiment needs web search).
     """
     symbol = ticker.upper().strip()
 
@@ -16,9 +17,8 @@ def fetch_metrics(ticker: str) -> dict:
         if result:
             return result
     except Exception as e:
-        print(f"  yfinance failed ({e}), falling back to Claude web search...")
+        print(f"  yfinance failed ({e}), falling back to Claude...")
 
-    # Fallback: Claude with web search
     return _fetch_via_claude(symbol)
 
 
@@ -34,7 +34,12 @@ def _fetch_via_yfinance(symbol: str) -> dict | None:
 
 
 def _fetch_via_claude(symbol: str) -> dict:
-    """Fallback: use Claude with web search to get financial metrics."""
+    """Fallback: use Claude WITHOUT web search to get financial metrics.
+
+    Does not use web search to avoid consuming rate limit — the earnings
+    sentiment module needs that budget. Claude's training data includes
+    recent financial metrics for publicly traded companies.
+    """
     import json
     import re
     import anthropic
@@ -42,53 +47,31 @@ def _fetch_via_claude(symbol: str) -> dict:
     client = anthropic.Anthropic()
     response = client.messages.create(
         model="claude-haiku-4-5-20251001",
-        max_tokens=1500,
-        tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 5}],
+        max_tokens=800,
         messages=[{
             "role": "user",
             "content": (
-                f"Look up the current live financial data for stock ticker {symbol} "
-                "from Yahoo Finance or another reliable source. Search the web to get "
-                "the most up-to-date numbers.\n\n"
-                "Return ONLY a JSON object with these exact fields (use null for unavailable data):\n"
-                "{\n"
-                '  "name": "Full Company Name",\n'
-                '  "sector": "sector name",\n'
-                '  "industry": "specific industry",\n'
-                '  "currentPrice": current stock price as number,\n'
-                '  "marketCap": market cap in dollars as number,\n'
-                '  "trailingPE": trailing P/E ratio,\n'
-                '  "forwardPE": forward P/E ratio,\n'
-                '  "priceToBook": price-to-book ratio,\n'
-                '  "enterpriseToEbitda": EV/EBITDA ratio,\n'
-                '  "enterpriseToRevenue": EV/Revenue ratio,\n'
-                '  "grossMargin": as decimal (e.g. 0.45 for 45%),\n'
-                '  "operatingMargin": as decimal,\n'
-                '  "netMargin": as decimal,\n'
-                '  "returnOnEquity": as decimal,\n'
-                '  "returnOnAssets": as decimal,\n'
-                '  "currentRatio": current ratio,\n'
-                '  "quickRatio": quick ratio,\n'
-                '  "debtToEquity": debt-to-equity as percentage (e.g. 150 for 150%),\n'
-                '  "beta": beta coefficient,\n'
-                '  "fiftyDayAvg": 50-day moving average price,\n'
-                '  "twoHundredDayAvg": 200-day moving average price,\n'
-                '  "fiftyTwoWeekHigh": 52-week high price,\n'
-                '  "fiftyTwoWeekLow": 52-week low price,\n'
-                '  "revenueGrowth": YoY revenue growth as decimal,\n'
-                '  "earningsGrowth": YoY earnings growth as decimal\n'
-                "}\n\n"
-                "IMPORTANT: Return ONLY the JSON. No explanations, no markdown code blocks."
+                f"Provide the most recent financial data you know for stock ticker {symbol}. "
+                "Return ONLY a JSON object with these fields (null if unknown):\n"
+                '{"name":"Company Name","sector":"sector","industry":"industry",'
+                '"currentPrice":0,"marketCap":0,"trailingPE":0,"forwardPE":0,'
+                '"priceToBook":0,"enterpriseToEbitda":0,"enterpriseToRevenue":0,'
+                '"grossMargin":0.0,"operatingMargin":0.0,"netMargin":0.0,'
+                '"returnOnEquity":0.0,"returnOnAssets":0.0,'
+                '"currentRatio":0,"quickRatio":0,"debtToEquity":0,"beta":0,'
+                '"fiftyDayAvg":0,"twoHundredDayAvg":0,'
+                '"fiftyTwoWeekHigh":0,"fiftyTwoWeekLow":0,'
+                '"revenueGrowth":0.0,"earningsGrowth":0.0}\n'
+                "Return ONLY JSON, no other text."
             ),
         }],
     )
 
-    text_blocks = [b.text for b in response.content if b.type == "text"]
-    text = "".join(text_blocks)
+    text = response.content[0].text.strip()
     json_match = re.search(r"\{[\s\S]*\}", text)
 
     if not json_match:
-        raise ValueError(f"Could not retrieve financial data for {symbol}. The ticker may be invalid.")
+        raise ValueError(f'Ticker "{symbol}" not found. Check the symbol and try again.')
 
     d = json.loads(json_match.group())
     return {
