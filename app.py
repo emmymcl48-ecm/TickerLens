@@ -222,6 +222,26 @@ if analyze_clicked and ticker_input:
             with col_d:
                 render_pillar(pillars[3])
 
+            # ── Data sources ──
+            data_source = metrics.get("dataSource", "Unknown")
+            data_date = metrics.get("dataDate", "Unknown")
+            sector_source = "WRDS / Compustat (Fama-French 48 Industry Medians)"
+
+            st.markdown(f"""
+            <div style="margin-top:1.5rem; padding:1rem; background:#161b22;
+                        border:1px solid #30363d; border-radius:10px;">
+                <div style="font-size:0.8rem; color:#8b949e; text-transform:uppercase;
+                            letter-spacing:0.05em; margin-bottom:0.5rem;">
+                    Data Sources
+                </div>
+                <div style="font-size:0.85rem; color:#c9d1d9; line-height:1.7;">
+                    <span style="color:#58a6ff;">Financial Metrics:</span> {data_source} — retrieved {data_date}<br>
+                    <span style="color:#58a6ff;">Sector Benchmarks:</span> {sector_source}<br>
+                    <span style="color:#58a6ff;">Earnings Sentiment:</span> Claude AI (Anthropic) with web search
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+
         except ValueError as e:
             st.error(str(e))
         except Exception as e:

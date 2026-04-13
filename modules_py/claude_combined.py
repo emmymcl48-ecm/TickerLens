@@ -7,6 +7,7 @@ rate limiting that would occur with two separate web search requests.
 import json
 import re
 import time
+from datetime import datetime
 import anthropic
 
 
@@ -72,7 +73,8 @@ def _combined_call(symbol: str, client: anthropic.Anthropic) -> tuple[dict, dict
                 '    "fiftyTwoWeekHigh": 0,\n'
                 '    "fiftyTwoWeekLow": 0,\n'
                 '    "revenueGrowth": 0.0,\n'
-                '    "earningsGrowth": 0.0\n'
+                '    "earningsGrowth": 0.0,\n'
+                '    "source": "e.g. Yahoo Finance, Google Finance, MarketWatch"\n'
                 '  },\n'
                 '  "sentiment": {\n'
                 '    "quarter": "Q4 2025",\n'
@@ -107,6 +109,8 @@ def _combined_call(symbol: str, client: anthropic.Anthropic) -> tuple[dict, dict
     m = parsed.get("metrics", {})
     metrics = {
         "ticker": symbol,
+        "dataSource": m.get("source") or "Claude Web Search",
+        "dataDate": datetime.now().strftime("%B %d, %Y"),
         "name": m.get("name") or symbol,
         "sector": m.get("sector"),
         "industry": m.get("industry"),
@@ -166,7 +170,8 @@ def _combined_call(symbol: str, client: anthropic.Anthropic) -> tuple[dict, dict
 def _fallback(symbol: str, error: str) -> tuple[dict, dict]:
     """Return empty metrics and neutral sentiment when everything fails."""
     metrics = {
-        "ticker": symbol, "name": symbol, "sector": None, "industry": None,
+        "ticker": symbol, "dataSource": "N/A", "dataDate": "N/A",
+        "name": symbol, "sector": None, "industry": None,
         "exchange": None, "currency": "USD", "currentPrice": None, "marketCap": None,
         "trailingPE": None, "forwardPE": None, "priceToBook": None,
         "enterpriseToEbitda": None, "enterpriseToRevenue": None,

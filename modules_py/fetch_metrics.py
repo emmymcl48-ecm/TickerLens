@@ -1,5 +1,6 @@
 """Fetch live financial metrics for a ticker using yfinance."""
 
+from datetime import datetime
 import yfinance as yf
 
 
@@ -21,6 +22,8 @@ def fetch_metrics(ticker: str) -> dict | None:
 
         return {
             "ticker": symbol,
+            "dataSource": "Yahoo Finance",
+            "dataDate": datetime.now().strftime("%B %d, %Y"),
             "name": info.get("longName") or info.get("shortName") or symbol,
             "sector": info.get("sector"),
             "industry": info.get("industry"),
