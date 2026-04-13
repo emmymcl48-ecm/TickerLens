@@ -169,6 +169,13 @@ if analyze_clicked and ticker_input:
             transcript = fetch_transcript(ticker_input)
             sentiment = analyze_transcript(ticker_input, transcript["text"] if transcript else None)
 
+            # Add transcript quarter/date to the sentiment reasoning
+            if transcript and transcript.get("quarter"):
+                quarter_label = transcript["quarter"]
+                if transcript.get("date"):
+                    quarter_label += f" ({transcript['date']})"
+                sentiment["reasoning"] = f"[{quarter_label}] {sentiment['reasoning']}"
+
             # 5. Compute overall
             pillars = [valuation, profitability, risk_momentum, sentiment]
             overall = compute_overall(pillars)
