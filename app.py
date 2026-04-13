@@ -3,6 +3,7 @@
 import streamlit as st
 from modules_py.fetch_metrics import fetch_metrics
 from modules_py.earnings_sentiment import get_earnings_sentiment
+from modules_py.claude_combined import fetch_metrics_and_sentiment
 from modules_py.scoring import score_valuation, score_profitability, score_risk_momentum, compute_overall
 from modules_py.industry_map import resolve_industry, get_sector_medians, get_industry_name
 
@@ -146,8 +147,15 @@ def render_pillar(pillar):
 if analyze_clicked and ticker_input:
     with st.spinner("Analyzing... this may take 15–30 seconds."):
         try:
-            # 1. Fetch live metrics via yfinance
+            # 1. Try yfinance for current metrics (fast, free)
             metrics = fetch_metrics(ticker_input)
+
+            if metrics:
+                # yfinance worked — use separate Claude call for sentiment only
+                sentiment = get_earnings_sentiment(ticker_input)
+            else:
+                # yfinance blocked — ONE combined Claude call for both
+                metrics, sentiment = fetch_metrics_and_sentiment(ticker_input)
 
             # 2. Resolve FF48 industry
             ff48 = resolve_industry(metrics.get("industry"))
@@ -163,9 +171,6 @@ if analyze_clicked and ticker_input:
             valuation = score_valuation(metrics, fallback_medians)
             profitability = score_profitability(metrics, fallback_medians)
             risk_momentum = score_risk_momentum(metrics, fallback_medians)
-
-            # 4. Earnings sentiment (Claude searches + analyzes in one step)
-            sentiment = get_earnings_sentiment(ticker_input)
 
             # 5. Compute overall
             pillars = [valuation, profitability, risk_momentum, sentiment]
