@@ -16,67 +16,73 @@ def fetch_transcript(ticker: str) -> dict | None:
     try:
         response = client.messages.create(
             model="claude-haiku-4-5-20251001",
-            max_tokens=3500,
+            max_tokens=4000,
             tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 5}],
             messages=[{
                 "role": "user",
                 "content": (
-                    f"Search the web for the most recent quarterly earnings call transcript "
-                    f"for stock ticker {symbol}. Try searching for:\n"
-                    f'- "{symbol} earnings call transcript 2026"\n'
-                    f'- "{symbol} earnings call transcript 2025"\n'
-                    f'- "{symbol} quarterly results transcript"\n\n'
-                    "Look on Motley Fool, Seeking Alpha, The Street, or any financial news source.\n\n"
-                    "Once you find the most recent transcript or earnings call coverage, respond with "
-                    "EXACTLY this format — a JSON header line followed by your summary:\n\n"
-                    "TRANSCRIPT_INFO: {\"quarter\": \"Q4 2025\", \"date\": \"February 26, 2026\", "
-                    "\"company\": \"Full Company Name\"}\n\n"
-                    "Then provide a detailed summary (at least 600 words) that includes:\n"
-                    "1. Key financial results discussed (revenue, EPS, year-over-year changes)\n"
-                    "2. Management's forward guidance and strategy comments\n"
-                    "3. Key themes, risks, and opportunities mentioned\n"
-                    "4. Analyst Q&A highlights — what were analysts most focused on?\n"
-                    "5. Management's tone — confident, cautious, defensive?\n\n"
-                    "If you find earnings results coverage but not a full transcript, that is fine — "
-                    "summarize whatever earnings information you can find. The important thing is to "
-                    "find the MOST RECENT quarter's earnings information."
+                    f"Search the web for the most recent quarterly earnings call for "
+                    f"stock ticker {symbol}.\n\n"
+                    "After searching, provide:\n"
+                    "1. First line must be: QUARTER: <e.g. Q4 2025>\n"
+                    "2. Second line must be: DATE: <e.g. February 26, 2026>\n"
+                    "3. Third line must be: COMPANY: <full company name>\n\n"
+                    "Then provide a detailed summary covering:\n"
+                    "- Key financial results (revenue, EPS, year-over-year changes)\n"
+                    "- Management's forward guidance and strategy\n"
+                    "- Key themes, risks, and opportunities\n"
+                    "- Analyst Q&A highlights\n"
+                    "- Management's tone (confident, cautious, defensive)\n\n"
+                    "If a full transcript isn't available, summarize the earnings "
+                    "results and coverage you find. Focus on the MOST RECENT quarter."
                 ),
             }],
         )
 
-        text_blocks = [b.text for b in response.content if b.type == "text"]
-        text = "\n\n".join(text_blocks)
+        # Collect ALL text from the response
+        text = _extract_text(response)
 
-        if not text or len(text) < 100:
+        if not text or len(text) < 50:
             return None
 
-        # Parse the TRANSCRIPT_INFO header if present
-        quarter = None
-        date = None
-        company = symbol
+        # Parse metadata from the response
+        quarter = _extract_field(text, r"QUARTER:\s*(.+)")
+        date = _extract_field(text, r"DATE:\s*(.+)")
+        company = _extract_field(text, r"COMPANY:\s*(.+)") or symbol
 
-        info_match = re.search(r'TRANSCRIPT_INFO:\s*(\{[^}]+\})', text)
-        if info_match:
-            try:
-                info = json.loads(info_match.group(1))
-                quarter = info.get("quarter")
-                date = info.get("date")
-                company = info.get("company", symbol)
-            except json.JSONDecodeError:
-                pass
-            # Remove the header line from the summary text
-            text = text[info_match.end():].strip()
+        # Remove the metadata lines from the summary text
+        summary = re.sub(
+            r"^(QUARTER:|DATE:|COMPANY:|TRANSCRIPT_INFO:).*$",
+            "", text, flags=re.MULTILINE,
+        ).strip()
 
-        if not text or len(text) < 100:
-            return None
+        if not summary or len(summary) < 50:
+            summary = text  # Just use the full text if stripping removed too much
 
         return {
             "title": f"{company} ({symbol}) Earnings Call Summary",
             "quarter": quarter,
             "date": date,
             "company": company,
-            "text": text,
+            "text": summary,
         }
     except Exception as e:
         print(f"Transcript fetch error for {symbol}: {e}")
         return None
+
+
+def _extract_text(response) -> str:
+    """Extract all text content from a Claude response, including after tool use."""
+    parts = []
+    for block in response.content:
+        if block.type == "text" and block.text.strip():
+            parts.append(block.text.strip())
+    return "\n\n".join(parts)
+
+
+def _extract_field(text: str, pattern: str) -> str | None:
+    """Extract a single metadata field from text."""
+    match = re.search(pattern, text, re.IGNORECASE)
+    if match:
+        return match.group(1).strip()
+    return None
