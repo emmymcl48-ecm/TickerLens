@@ -2,8 +2,7 @@
 
 import streamlit as st
 from modules_py.fetch_metrics import fetch_metrics
-from modules_py.fetch_transcript import fetch_transcript
-from modules_py.analyze_transcript import analyze_transcript
+from modules_py.earnings_sentiment import get_earnings_sentiment
 from modules_py.scoring import score_valuation, score_profitability, score_risk_momentum, compute_overall
 from modules_py.industry_map import resolve_industry, get_sector_medians, get_industry_name
 
@@ -165,16 +164,8 @@ if analyze_clicked and ticker_input:
             profitability = score_profitability(metrics, fallback_medians)
             risk_momentum = score_risk_momentum(metrics, fallback_medians)
 
-            # 4. Fetch transcript + sentiment (Claude AI)
-            transcript = fetch_transcript(ticker_input)
-            sentiment = analyze_transcript(ticker_input, transcript["text"] if transcript else None)
-
-            # Add transcript quarter/date to the sentiment reasoning
-            if transcript and transcript.get("quarter"):
-                quarter_label = transcript["quarter"]
-                if transcript.get("date"):
-                    quarter_label += f" ({transcript['date']})"
-                sentiment["reasoning"] = f"[{quarter_label}] {sentiment['reasoning']}"
+            # 4. Earnings sentiment (Claude searches + analyzes in one step)
+            sentiment = get_earnings_sentiment(ticker_input)
 
             # 5. Compute overall
             pillars = [valuation, profitability, risk_momentum, sentiment]
