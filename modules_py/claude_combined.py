@@ -53,7 +53,7 @@ def _combined_call(symbol: str, client: anthropic.Anthropic) -> tuple[dict, dict
                 '    "sector": "sector",\n'
                 '    "industry": "industry",\n'
                 '    "currentPrice": 0,\n'
-                '    "marketCap": 0,\n'
+                '    "marketCap": 0,  // raw dollars, e.g. 3500000000000 for $3.5 trillion\n'
                 '    "trailingPE": 0,\n'
                 '    "forwardPE": 0,\n'
                 '    "priceToBook": 0,\n'
@@ -107,6 +107,18 @@ def _combined_call(symbol: str, client: anthropic.Anthropic) -> tuple[dict, dict
 
     # Build metrics dict
     m = parsed.get("metrics", {})
+
+    # Normalize marketCap — Claude sometimes returns in billions (e.g. 3500)
+    # instead of raw dollars (3500000000000). Any publicly traded company
+    # has a market cap > $1M, so a value below that is almost certainly
+    # in a compressed unit.
+    raw_mcap = m.get("marketCap")
+    if raw_mcap and raw_mcap > 0:
+        if raw_mcap < 1_000:
+            raw_mcap = int(raw_mcap * 1e9)   # was in billions
+        elif raw_mcap < 1_000_000:
+            raw_mcap = int(raw_mcap * 1e6)   # was in millions
+
     metrics = {
         "ticker": symbol,
         "dataSource": m.get("source") or "Claude Web Search",
@@ -117,7 +129,7 @@ def _combined_call(symbol: str, client: anthropic.Anthropic) -> tuple[dict, dict
         "exchange": None,
         "currency": "USD",
         "currentPrice": m.get("currentPrice"),
-        "marketCap": m.get("marketCap"),
+        "marketCap": raw_mcap,
         "trailingPE": m.get("trailingPE"),
         "forwardPE": m.get("forwardPE"),
         "priceToBook": m.get("priceToBook"),

@@ -334,10 +334,16 @@ if "analysis" in st.session_state:
             peers = [t for t in peers if re.match(r'^[A-Z]{1,5}(\.[A-Z])?$', t)]
 
             if peers:
-                all_tickers = [ticker] + peers
+                all_tickers = [ticker] + peers[:4]
                 all_metrics = {ticker: metrics}
-                for p in peers:
+                for p in peers[:4]:
                     pm = cached_fetch_metrics(p)
+                    if not pm:
+                        # yfinance blocked — fall back to Claude
+                        try:
+                            pm, _ = cached_metrics_and_sentiment(p)
+                        except Exception:
+                            pm = None
                     if pm:
                         all_metrics[p] = pm
 
