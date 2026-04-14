@@ -2,14 +2,18 @@
 
 
 def score_vs_median(value, median, direction="lower"):
-    """Score a metric relative to its sector median (1-10 scale)."""
+    """Score a metric relative to its sector median (1-10 scale).
+
+    Uses a gentler slope (4) centered at 5 so that moderate deviations
+    from the median don't immediately slam to 1 or 10.
+    """
     if value is None or median is None or median == 0:
         return None
     ratio = value / median
     if direction == "lower":
-        raw = 10 - (ratio * 5)
+        raw = 5 + (1 - ratio) * 4
     else:
-        raw = ratio * 5
+        raw = 5 + (ratio - 1) * 4
     return max(1, min(10, round(raw)))
 
 
@@ -78,14 +82,18 @@ def score_profitability(metrics, medians):
         reasons.append(f"Net margin {nm*100:.1f}% vs sector {nm_med*100:.1f}%")
 
     roe = metrics.get("returnOnEquity")
-    if roe is not None:
-        s = max(1, min(10, round(roe * 25)))
+    roic_med = medians.get("returnOnInvestedCapital")
+    if roe is not None and roic_med is not None and roic_med != 0:
+        scores.append(score_vs_median(roe, roic_med, "higher"))
+        reasons.append(f"ROE {roe*100:.1f}% vs sector ROIC {roic_med*100:.1f}%")
+    elif roe is not None:
+        s = max(1, min(10, round(5 + roe * 15)))
         scores.append(s)
         reasons.append(f"ROE {roe*100:.1f}%")
 
     rg = metrics.get("revenueGrowth")
     if rg is not None:
-        s = max(1, min(10, round(5 + rg * 10)))
+        s = max(1, min(10, round(5 + rg * 8)))
         scores.append(s)
         reasons.append(f"Revenue growth {rg*100:.1f}%")
 
@@ -109,7 +117,7 @@ def score_risk_momentum(metrics, medians):
 
     de = metrics.get("debtToEquity")
     if de is not None:
-        s = max(1, min(10, round(9 - de / 30)))
+        s = max(1, min(10, round(8 - de / 40)))
         scores.append(s)
         reasons.append(f"Debt/Equity {de:.0f}%")
 
