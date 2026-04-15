@@ -50,8 +50,12 @@ toc_items = [
     '5. Sector-Relative Benchmarking (Fama-French 48)',
     '6. AI Integration — Claude API',
     '7. Frontend Design (Streamlit)',
+    '   7.1 Interactive Price Chart',
+    '   7.2 Peer Comparison Table',
+    '   7.3 Downloadable Analysis Report',
+    '   7.4 Ticker Validation',
     '8. Deployment & Infrastructure',
-    '9. Rate Limiting & Resilience',
+    '9. Caching, Rate Limiting & Resilience',
     '10. Parameters & Configuration Reference',
     '11. Example Outputs',
 ]
@@ -77,9 +81,10 @@ doc.add_paragraph(
 doc.add_paragraph(
     'Each pillar produces a score from 1 to 10 and a signal — Green (bullish), '
     'Yellow (neutral), or Red (bearish). These pillar scores are combined using '
-    'a weighted average to produce an overall investment verdict. The tool is '
-    'designed to be objective, comparing each stock against its own industry '
-    'sector rather than using universal thresholds.'
+    'a weighted average to produce an overall investment verdict. The tool also '
+    'provides an interactive price chart, side-by-side peer comparison, and a '
+    'downloadable analysis report. All scoring is objective, comparing each stock '
+    'against its own industry sector rather than using universal thresholds.'
 )
 
 doc.add_heading('Key Design Principles', level=2)
@@ -89,7 +94,8 @@ bullets = [
     'Transparent: Every score shows the underlying data comparison, and all data sources are cited with retrieval dates.',
     'Real-time: All financial data is fetched live at the time of analysis using today\'s market data.',
     'AI-enhanced: Earnings call transcripts are found via web search and analyzed by Claude AI for sentiment and forward guidance.',
-    'Resilient: Multiple data retrieval strategies ensure the tool works reliably across local and cloud environments.',
+    'Resilient: Multiple data retrieval strategies and caching ensure the tool works reliably across local and cloud environments.',
+    'Interactive: Users can switch price chart timeframes, compare peer stocks, and download full reports without reloading.',
 ]
 for b in bullets:
     doc.add_paragraph(b, style='List Bullet')
@@ -106,38 +112,40 @@ doc.add_paragraph(
 )
 
 doc.add_heading('Technology Stack', level=2)
-table = doc.add_table(rows=9, cols=2)
-table.style = 'Light Shading Accent 1'
-table.alignment = WD_TABLE_ALIGNMENT.CENTER
-headers = table.rows[0].cells
-headers[0].text = 'Component'
-headers[1].text = 'Technology'
-data = [
+tech_data = [
     ('Language', 'Python 3.x'),
     ('Web Framework', 'Streamlit (frontend + server in one)'),
     ('Financial Data (Primary)', 'yfinance — Python Yahoo Finance library with curl_cffi'),
     ('Financial Data (Fallback)', 'Claude API with web search (when yfinance is blocked on cloud IPs)'),
     ('Earnings Analysis', 'Claude API (Anthropic) with web search — claude-haiku-4-5 model'),
     ('Sector Benchmarks', 'Pre-computed JSON from WRDS/Compustat (Fama-French 48 industries)'),
-    ('Industry Mapping', 'Keyword-based Yahoo Finance industry to FF48 lookup'),
+    ('Industry Mapping', 'Keyword-based Yahoo Finance industry to FF48 lookup (~90 mappings)'),
+    ('Charting', 'Plotly — interactive price charts with dark theme'),
+    ('Caching', 'Streamlit @st.cache_data with TTL-based expiration'),
     ('Deployment', 'Render.com (free tier, auto-deploy from GitHub)'),
 ]
-for i, (comp, tech) in enumerate(data):
+table = doc.add_table(rows=len(tech_data) + 1, cols=2)
+table.style = 'Light Shading Accent 1'
+table.alignment = WD_TABLE_ALIGNMENT.CENTER
+headers = table.rows[0].cells
+headers[0].text = 'Component'
+headers[1].text = 'Technology'
+for i, (comp, tech) in enumerate(tech_data):
     row = table.rows[i + 1].cells
     row[0].text = comp
     row[1].text = tech
 
 doc.add_heading('Project File Structure', level=2)
 files = [
-    ('app.py', 'Main Streamlit application — UI, pipeline orchestration, result rendering'),
-    ('modules_py/fetch_metrics.py', 'Fetches live financial metrics via yfinance (primary)'),
-    ('modules_py/claude_combined.py', 'Combined Claude fallback — fetches metrics + sentiment in one API call'),
+    ('app.py', 'Main Streamlit application — UI, caching, pipeline orchestration, chart, peer comparison, report download'),
+    ('modules_py/fetch_metrics.py', 'Fetches live financial metrics via yfinance (primary source)'),
+    ('modules_py/claude_combined.py', 'Combined Claude fallback — fetches metrics + sentiment in one API call, with market cap normalization'),
     ('modules_py/earnings_sentiment.py', 'Standalone earnings sentiment via Claude web search (used when yfinance works)'),
-    ('modules_py/scoring.py', 'Quantitative scoring engine — compares metrics to sector medians'),
-    ('modules_py/industry_map.py', 'Maps Yahoo Finance industry names to Fama-French 48 sectors'),
-    ('data/sectorData.json', 'Pre-computed FF48 industry median financial ratios (from WRDS)'),
-    ('.streamlit/config.toml', 'Streamlit theme configuration (dark finance theme)'),
-    ('requirements.txt', 'Python dependencies'),
+    ('modules_py/scoring.py', 'Quantitative scoring engine — compares metrics to sector medians using gentler slope-4 formula'),
+    ('modules_py/industry_map.py', 'Maps ~90 Yahoo Finance industry names to Fama-French 48 sectors'),
+    ('data/sectorData.json', 'Pre-computed FF48 industry median financial ratios (from WRDS, 48 industries)'),
+    ('.streamlit/config.toml', 'Streamlit theme configuration (dark finance theme) and Render server settings'),
+    ('requirements.txt', 'Python dependencies (streamlit, yfinance, anthropic, plotly, etc.)'),
     ('.env', 'Environment variables — ANTHROPIC_API_KEY (not committed to Git)'),
 ]
 table2 = doc.add_table(rows=len(files) + 1, cols=2)
@@ -155,14 +163,15 @@ doc.add_heading('3. Data Sources & Retrieval Strategy', level=1)
 
 doc.add_paragraph(
     'TickerLens uses a multi-layered data retrieval strategy designed to always '
-    'return current, real-time data regardless of the deployment environment.'
+    'return current, real-time data regardless of the deployment environment. '
+    'All API responses are cached using Streamlit\'s @st.cache_data decorator '
+    'to avoid redundant network calls on page reruns.'
 )
 
 doc.add_heading('3.1 Live Financial Metrics (yfinance + Claude Fallback)', level=2)
 
 doc.add_paragraph(
-    'Financial metrics are always retrieved live — never cached or stale. The '
-    'system uses a two-tier approach:'
+    'Financial metrics are always retrieved live. The system uses a two-tier approach:'
 )
 
 p = doc.add_paragraph()
@@ -171,27 +180,30 @@ run.bold = True
 p.add_run(
     'The Python yfinance library (with curl_cffi for cloud compatibility) '
     'fetches data directly from Yahoo Finance. This is fast, free, and provides '
-    'comprehensive financial data. Works reliably on local machines and many '
-    'cloud environments.'
+    'comprehensive financial data. Results are cached for 5 minutes. Works reliably '
+    'on local machines and many cloud environments.'
 )
 
 p = doc.add_paragraph()
 run = p.add_run('Fallback — Claude Web Search: ')
 run.bold = True
 p.add_run(
-    'When yfinance is blocked (Yahoo rate-limits some cloud server IPs), the '
-    'system falls back to a combined Claude API call with web search enabled. '
+    'When yfinance is blocked (Yahoo rate-limits some cloud server IPs like Render), '
+    'the system falls back to a combined Claude API call with web search enabled. '
     'Claude searches financial websites (Yahoo Finance, Google Finance, '
-    'MarketWatch, etc.) for current data and returns structured metrics. This '
-    'fallback is combined with the earnings sentiment analysis in a single API '
-    'call to avoid rate limiting.'
+    'MarketWatch, etc.) for current data and returns structured metrics. Market cap '
+    'values are automatically normalized — if Claude returns a value in billions '
+    '(e.g. 3500) instead of raw dollars (3,500,000,000,000), the system detects '
+    'and scales it correctly. This fallback is combined with the earnings sentiment '
+    'analysis in a single API call to avoid rate limiting. Results are cached for '
+    '15 minutes.'
 )
 
 doc.add_paragraph('The following metrics are retrieved for each ticker:')
 
 metrics_list = [
     ('Current Price', 'Latest market price'),
-    ('Market Cap', 'Total market capitalization'),
+    ('Market Cap', 'Total market capitalization (in raw dollars)'),
     ('Trailing P/E', 'Price / trailing 12-month earnings per share'),
     ('Forward P/E', 'Price / estimated next-12-month EPS'),
     ('Price-to-Book', 'Market price / book value per share'),
@@ -234,11 +246,11 @@ sector_metrics = [
     ('evm', 'Enterprise Value Multiple / EBITDA (median)'),
     ('pe_inc', 'Price-to-Earnings including extraordinary items (median)'),
     ('pe_op_dil', 'Price-to-Earnings from operations, diluted (median)'),
-    ('GProf', 'Gross Profitability = gross profit / assets (median)'),
-    ('aftret_invcapx', 'After-tax return on invested capital (median)'),
-    ('gpm', 'Gross Profit Margin (median)'),
-    ('npm', 'Net Profit Margin (median)'),
-    ('quick_ratio', 'Quick Ratio (median)'),
+    ('grossProfit', 'Gross Profitability = gross profit / assets (median)'),
+    ('returnOnInvestedCapital', 'After-tax return on invested capital (median) — used for sector-relative ROE scoring'),
+    ('grossMargin', 'Gross Profit Margin (median)'),
+    ('netMargin', 'Net Profit Margin (median)'),
+    ('quickRatio', 'Quick Ratio (median)'),
 ]
 table4 = doc.add_table(rows=len(sector_metrics) + 1, cols=2)
 table4.style = 'Light Shading Accent 1'
@@ -259,7 +271,7 @@ doc.add_paragraph(
 
 doc.add_paragraph(
     'The earnings sentiment output includes the fiscal quarter and date of the '
-    'earnings call (e.g., "[Q4 2025 - January 28, 2026]"), so users know exactly '
+    'earnings call (e.g., "[Q4 2025 — January 28, 2026]"), so users know exactly '
     'which earnings report is being analyzed.'
 )
 
@@ -283,15 +295,19 @@ doc.add_heading('4. Scoring Methodology', level=1)
 doc.add_paragraph(
     'Each pillar scores the stock on a 1-10 scale. Individual metric scores are '
     'computed by comparing the stock\'s value to its sector median, then averaged '
-    'within each pillar. The core scoring formula is:'
+    'within each pillar. The core scoring formula uses a slope of 4, centered at 5 '
+    '(the median), providing a gentler curve that avoids extreme scores for '
+    'moderate deviations from the sector median:'
 )
 
 doc.add_paragraph(
     'For "lower is better" metrics (e.g., P/E, EV/EBITDA):\n'
-    '    score = 10 - (stock_value / sector_median) x 5\n\n'
+    '    score = 5 + (1 - ratio) x 4     where ratio = stock_value / sector_median\n\n'
     'For "higher is better" metrics (e.g., margins, ROE):\n'
-    '    score = (stock_value / sector_median) x 5\n\n'
-    'All scores are clamped to the range [1, 10].'
+    '    score = 5 + (ratio - 1) x 4     where ratio = stock_value / sector_median\n\n'
+    'All scores are clamped to the range [1, 10]. At the sector median (ratio = 1), '
+    'the score is exactly 5. A stock at 2x the median P/E scores 1, while a stock '
+    'at half the median P/E scores 7.'
 )
 
 doc.add_paragraph(
@@ -328,8 +344,8 @@ doc.add_paragraph(
 prof_metrics = [
     ('Gross Margin vs. sector median', 'Higher is better', 'Equal weight'),
     ('Net Margin vs. sector median', 'Higher is better', 'Equal weight'),
-    ('Return on Equity (absolute)', '> 20% is strong', 'Equal weight'),
-    ('Revenue Growth (absolute)', '> 10% is strong', 'Equal weight'),
+    ('ROE vs. sector ROIC median', 'Higher is better (sector-relative)', 'Equal weight'),
+    ('Revenue Growth (absolute)', 'Higher is better', 'Equal weight'),
 ]
 table6 = doc.add_table(rows=len(prof_metrics) + 1, cols=3)
 table6.style = 'Light Shading Accent 1'
@@ -341,8 +357,12 @@ for i, row_data in enumerate(prof_metrics):
         table6.rows[i + 1].cells[j].text = val
 
 doc.add_paragraph(
-    'Note: ROE and Revenue Growth are scored on absolute scales rather than '
-    'vs. sector median, since these metrics are universally interpretable.'
+    'ROE is compared against the sector\'s median Return on Invested Capital (ROIC) '
+    'from the Fama-French 48 dataset using the standard slope-4 formula. This makes '
+    'ROE scoring sector-relative — a 15% ROE is strong in banking but ordinary in '
+    'tech. If no sector ROIC median is available, a fallback absolute formula is used: '
+    'score = 5 + ROE x 15. Revenue Growth uses an absolute formula: '
+    'score = 5 + growth x 8.'
 )
 
 doc.add_heading('4.3 Risk & Momentum Pillar', level=2)
@@ -351,8 +371,8 @@ doc.add_paragraph(
 )
 risk_metrics = [
     ('Quick Ratio vs. sector median', 'Higher is better (more liquid)', 'Equal weight'),
-    ('Debt-to-Equity (absolute)', 'Lower is better: score = 9 - (D/E / 30)', 'Equal weight'),
-    ('Beta (absolute)', 'Closer to 1 is neutral: score = 8 - (beta-0.5) x 3', 'Equal weight'),
+    ('Debt-to-Equity (absolute)', 'Lower is better: score = 8 - (D/E / 40)', 'Equal weight'),
+    ('Beta (absolute)', 'Closer to 1 is neutral: score = 8 - (beta - 0.5) x 3', 'Equal weight'),
     ('Price vs. 200-Day Avg', 'Above = positive momentum: score = 5 + (% above) x 15', 'Equal weight'),
 ]
 table7 = doc.add_table(rows=len(risk_metrics) + 1, cols=3)
@@ -436,7 +456,8 @@ doc.add_paragraph(
     'stock is analyzed, we identify its FF48 industry via a keyword-based mapping from '
     'the Yahoo Finance industry name (e.g., "Semiconductors" maps to CHIPS, '
     '"Auto Manufacturers" maps to AUTOS) and compare its metrics against '
-    'the corresponding medians.'
+    'the corresponding medians. The mapping covers approximately 90 Yahoo Finance '
+    'industry labels across all major sectors.'
 )
 
 # ═══════════════════════════════════════════
@@ -457,17 +478,26 @@ doc.add_paragraph(
 
 doc.add_heading('Path B: yfinance Blocked (Cloud Fallback)', level=2)
 doc.add_paragraph(
-    'When yfinance is blocked by Yahoo (common on cloud server IPs), a single combined '
-    'Claude API call with web search retrieves both current financial metrics AND '
-    'earnings sentiment analysis in one request. This approach was specifically designed '
-    'to avoid rate limiting — making two separate web search calls back-to-back would '
-    'exceed the API rate limit of 50,000 input tokens per minute.'
+    'When yfinance is blocked by Yahoo (common on cloud server IPs like Render), a '
+    'single combined Claude API call with web search retrieves both current financial '
+    'metrics AND earnings sentiment analysis in one request. This approach was '
+    'specifically designed to avoid rate limiting — making two separate web search '
+    'calls back-to-back would exceed the API rate limit of 50,000 input tokens per minute.'
+)
+
+doc.add_paragraph(
+    'The Claude fallback includes a market cap normalization step. Because Claude may '
+    'return market cap in billions (e.g. 3500) instead of raw dollars (3,500,000,000,000), '
+    'the parser detects values that are too small for a public company and automatically '
+    'scales them to the correct magnitude.'
 )
 
 doc.add_paragraph(
     'In both paths, only one Claude web search call is ever made per analysis. '
     'The model used is claude-haiku-4-5 (fast, cost-effective). Web search is enabled '
-    'via Anthropic\'s built-in web_search tool, limited to 5 searches per call.'
+    'via Anthropic\'s built-in web_search tool, limited to 5 searches per call. '
+    'The peer comparison feature also uses Claude as a fallback when yfinance is '
+    'blocked, making one additional call per peer ticker (capped at 4 peers).'
 )
 
 # ═══════════════════════════════════════════
@@ -477,20 +507,65 @@ doc.add_heading('7. Frontend Design (Streamlit)', level=1)
 
 doc.add_paragraph(
     'The frontend is built entirely with Streamlit, using custom CSS for a dark '
-    'finance-themed design. Key UI elements:'
+    'finance-themed design. Analysis results are stored in Streamlit\'s session_state '
+    'so that interactive elements (chart period buttons, peer inputs) work without '
+    'losing the analysis results on page reruns.'
 )
 
+doc.add_paragraph('Core UI elements:')
+
 frontend_items = [
-    'Ticker input field with uppercase formatting and Enter-key support',
+    'Ticker input field with uppercase formatting, format validation, and Enter-key support',
     'Loading spinner with estimated wait time ("Analyzing... this may take 15-30 seconds")',
     'Overall verdict banner showing company name, price, market cap, sector, and composite signal',
     'Four pillar cards in a 2x2 grid, each displaying: pillar name, numeric score with color, '
     'animated score bar, signal badge (Green/Yellow/Red), and plain-English reasoning',
+    'Interactive price chart with 1M / 3M / 6M / 1Y period selector buttons',
+    'Expandable peer comparison table for side-by-side metric analysis (up to 4 peers)',
     'Data Sources section showing where metrics came from and when they were retrieved',
+    'Download Report button generating a .txt analysis summary',
     'Error handling with descriptive messages for invalid tickers or API failures',
 ]
 for item in frontend_items:
     doc.add_paragraph(item, style='List Bullet')
+
+doc.add_heading('7.1 Interactive Price Chart', level=2)
+doc.add_paragraph(
+    'After the pillar cards, TickerLens displays an interactive price chart powered by '
+    'Plotly. The chart shows the stock\'s daily closing price as a green area chart '
+    'styled to match the dark finance theme. Users can switch between four time periods '
+    '(1M, 3M, 6M, 1Y) using buttons above the chart. Each period fetches historical '
+    'data from yfinance, cached for 15 minutes to avoid repeated requests. The chart '
+    'supports hover tooltips showing the exact date and price.'
+)
+
+doc.add_heading('7.2 Peer Comparison Table', level=2)
+doc.add_paragraph(
+    'An expandable "Compare with peers" section lets users enter up to 4 additional '
+    'stock tickers (comma-separated). TickerLens fetches financial metrics for each '
+    'peer and displays a side-by-side comparison table with the following metrics: '
+    'Price, P/E, P/B, EV/EBITDA, Gross Margin, Net Margin, ROE, Debt/Equity, Beta, '
+    'and Revenue Growth. If yfinance is blocked (on Render), the peer comparison '
+    'automatically falls back to Claude web search for each peer. The table is rendered '
+    'using st.dataframe for reliable rendering across all deployment environments.'
+)
+
+doc.add_heading('7.3 Downloadable Analysis Report', level=2)
+doc.add_paragraph(
+    'A "Download Report" button at the bottom of the analysis generates a plain-text '
+    '.txt file containing the complete analysis: company info (name, price, market cap, '
+    'sector), overall signal and score, and each pillar\'s score, signal, and detailed '
+    'reasoning. The file is named with the ticker and current date '
+    '(e.g., TickerLens_AAPL_20260415.txt).'
+)
+
+doc.add_heading('7.4 Ticker Validation', level=2)
+doc.add_paragraph(
+    'Before any API calls are made, the ticker input is validated against a regex '
+    'pattern: 1-5 uppercase letters with an optional dot suffix for share classes '
+    '(e.g., BRK.B). Invalid inputs receive an immediate error message without '
+    'consuming API resources.'
+)
 
 # ═══════════════════════════════════════════
 # 8. DEPLOYMENT
@@ -520,13 +595,34 @@ for i, (s, v) in enumerate(deploy_details):
     table9.rows[i + 1].cells[1].text = v
 
 # ═══════════════════════════════════════════
-# 9. RATE LIMITING & RESILIENCE
+# 9. CACHING, RATE LIMITING & RESILIENCE
 # ═══════════════════════════════════════════
-doc.add_heading('9. Rate Limiting & Resilience', level=1)
+doc.add_heading('9. Caching, Rate Limiting & Resilience', level=1)
 
+doc.add_heading('Caching Strategy', level=2)
 doc.add_paragraph(
-    'TickerLens was designed to handle two common failure modes in cloud deployment:'
+    'TickerLens uses Streamlit\'s @st.cache_data decorator with TTL (time-to-live) '
+    'expiration to avoid redundant API calls. When a user clicks a chart period '
+    'button or enters peers, the page reruns but cached data is served instantly '
+    'without re-fetching. Analysis results are also stored in st.session_state so '
+    'the full UI persists across interactive reruns.'
 )
+
+cache_items = [
+    ('Financial Metrics (yfinance)', '5 minutes', 'Keeps prices reasonably current while avoiding Yahoo rate limits'),
+    ('Earnings Sentiment (Claude)', '15 minutes', 'Earnings data changes infrequently; reduces API cost'),
+    ('Combined Fallback (Claude)', '15 minutes', 'Same rationale as sentiment — avoids duplicate web searches'),
+    ('Price History (yfinance)', '15 minutes', 'Historical data doesn\'t change often; avoids repeated large fetches'),
+]
+table_cache = doc.add_table(rows=len(cache_items) + 1, cols=3)
+table_cache.style = 'Light Shading Accent 1'
+table_cache.rows[0].cells[0].text = 'Data'
+table_cache.rows[0].cells[1].text = 'TTL'
+table_cache.rows[0].cells[2].text = 'Rationale'
+for i, (data, ttl, rationale) in enumerate(cache_items):
+    table_cache.rows[i + 1].cells[0].text = data
+    table_cache.rows[i + 1].cells[1].text = ttl
+    table_cache.rows[i + 1].cells[2].text = rationale
 
 doc.add_heading('Yahoo Finance Blocking', level=2)
 doc.add_paragraph(
@@ -535,7 +631,8 @@ doc.add_paragraph(
     'handles this by detecting yfinance failures and automatically falling back '
     'to the combined Claude web search approach. The fallback retrieves current '
     'metrics from alternative financial sources (Google Finance, MarketWatch, etc.) '
-    'via Claude\'s web search capability.'
+    'via Claude\'s web search capability. The peer comparison feature also uses this '
+    'fallback when yfinance is unavailable.'
 )
 
 doc.add_heading('Anthropic API Rate Limits', level=2)
@@ -545,10 +642,12 @@ doc.add_paragraph(
     'results are included in the input token count. TickerLens manages this by:'
 )
 rate_items = [
-    'Never making more than one web search call per analysis (combined call when yfinance fails).',
+    'Never making more than one web search call per main analysis (combined call when yfinance fails).',
+    'Caching all Claude responses for 15 minutes to avoid repeat calls.',
     'Automatic retry with 10-15 second delay when rate limited.',
     'Reduced search budget (2 searches instead of 5) on retry attempts.',
     'Graceful degradation — always returns a result, even if only with a neutral default.',
+    'Peer comparison capped at 4 tickers to limit additional API calls.',
 ]
 for item in rate_items:
     doc.add_paragraph(item, style='List Bullet')
@@ -563,11 +662,13 @@ params = [
     ('Green threshold', '>= 6.5', 'Score at or above this = bullish signal'),
     ('Yellow threshold', '>= 4.0', 'Score between 4.0 and 6.5 = neutral signal'),
     ('Red threshold', '< 4.0', 'Score below this = bearish signal'),
+    ('score_vs_median slope', '4', 'Multiplier for sector-relative scoring (gentler than original 5)'),
     ('Valuation weight', '0.30', 'Weight of Valuation pillar in overall score'),
     ('Profitability weight', '0.30', 'Weight of Profitability pillar in overall score'),
     ('Risk & Momentum weight', '0.20', 'Weight of Risk & Momentum pillar in overall score'),
     ('Earnings Sentiment weight', '0.20', 'Weight of Earnings Sentiment pillar in overall score'),
     ('Score range', '1-10', 'All individual metric scores clamped to this range'),
+    ('Max peers', '4', 'Maximum number of peer tickers in comparison'),
 ]
 table10 = doc.add_table(rows=len(params) + 1, cols=3)
 table10.style = 'Light Shading Accent 1'
@@ -580,14 +681,14 @@ for i, row_data in enumerate(params):
 
 doc.add_heading('Metric Scoring Formulas', level=2)
 formulas = [
-    ('P/E vs sector', 'score = 10 - (PE / median_PE) x 5', 'Lower is better'),
-    ('B/M vs sector', 'score = (BM / median_BM) x 5', 'Higher is better (cheaper)'),
-    ('EV/EBITDA vs sector', 'score = 10 - (EV / median_EV) x 5', 'Lower is better'),
-    ('Gross Margin vs sector', 'score = (GM / median_GM) x 5', 'Higher is better'),
-    ('Net Margin vs sector', 'score = (NM / median_NM) x 5', 'Higher is better'),
-    ('ROE (absolute)', 'score = ROE x 25 (clamped 1-10)', '4% -> 1, 20% -> 5, 40% -> 10'),
-    ('Revenue Growth (absolute)', 'score = 5 + growth x 10', '0% -> 5, 20% -> 7, 50% -> 10'),
-    ('Debt/Equity (absolute)', 'score = 9 - (D/E / 30)', '0% -> 9, 100% -> 6, 200% -> 2'),
+    ('P/E vs sector', 'score = 5 + (1 - PE/median) x 4', 'Lower is better'),
+    ('B/M vs sector', 'score = 5 + (BM/median - 1) x 4', 'Higher is better (cheaper)'),
+    ('EV/EBITDA vs sector', 'score = 5 + (1 - EV/median) x 4', 'Lower is better'),
+    ('Gross Margin vs sector', 'score = 5 + (GM/median - 1) x 4', 'Higher is better'),
+    ('Net Margin vs sector', 'score = 5 + (NM/median - 1) x 4', 'Higher is better'),
+    ('ROE vs sector ROIC', 'score = 5 + (ROE/ROIC_median - 1) x 4', 'Sector-relative; fallback: 5 + ROE x 15'),
+    ('Revenue Growth (absolute)', 'score = 5 + growth x 8', '0% -> 5, 25% -> 7, 62% -> 10'),
+    ('Debt/Equity (absolute)', 'score = 8 - (D/E / 40)', '0% -> 8, 120% -> 5, 280% -> 1'),
     ('Beta (absolute)', 'score = 8 - (beta - 0.5) x 3', '0.5 -> 8, 1.0 -> 6.5, 2.0 -> 3.5'),
     ('Price Momentum', 'score = 5 + (% above 200d avg) x 15', '0% -> 5, +20% -> 8, -20% -> 2'),
 ]
@@ -649,7 +750,7 @@ meta_results = [
     ('Valuation', 'Red (2.3/10)', 'P/E 27 vs sector; high EV/EBITDA relative to internet peers'),
     ('Profitability', 'Green (8.3/10)', 'Strong margins and ROE; 24% revenue growth'),
     ('Risk & Momentum', 'Yellow (5/10)', 'Moderate debt; high capex guidance ($115-135B) adds risk'),
-    ('Earnings Sentiment', 'Green (7.5/10)', '[Q4 2025 - Jan 28, 2026] Beat estimates; raised guidance; cautious on near-term AI monetization'),
+    ('Earnings Sentiment', 'Green (7.5/10)', '[Q4 2025 — Jan 28, 2026] Beat estimates; raised guidance; cautious on near-term AI monetization'),
 ]
 table14 = doc.add_table(rows=len(meta_results) + 1, cols=3)
 table14.style = 'Light Shading Accent 1'
@@ -685,6 +786,6 @@ doc.add_paragraph(
 )
 
 # ── Save ──
-output_path = r'C:\Users\emmym\TickerLens\TickerLens_Documentation.docx'
+output_path = r'C:\Users\emmym\OneDrive - The University of Texas at Austin\AI Class\TickerLens\TickerLens_Documentation.docx'
 doc.save(output_path)
 print(f'Document saved to {output_path}')
