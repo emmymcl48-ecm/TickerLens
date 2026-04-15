@@ -376,7 +376,11 @@ if "analysis" in st.session_state:
                             row[t] = "N/A"
                     rows.append(row)
 
-                st.table(rows)
+                import pandas as pd
+                st.dataframe(
+                    pd.DataFrame(rows).set_index("Metric"),
+                    use_container_width=True,
+                )
                 missing = [t for t in peers if t not in all_metrics]
                 if missing:
                     st.caption(f"Could not fetch data for: {', '.join(missing)}")
